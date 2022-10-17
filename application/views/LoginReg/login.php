@@ -7,8 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sukaii-Login</title>
 	<link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="<?=base_url()?>assets//bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="<?=base_url()?>assets//css/index.css">
+	<link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="<?=base_url()?>assets/css/index.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -42,11 +42,11 @@
 							</p>
 						</div>
 						<div class="reminder">
-							<form action="">
+
 								<!-- <input type="checkbox" > -->
 								<input type="checkbox" id="reminde_me" name="reminder" value="">
 								<label for="reminde_me" class="mb-0">Remember Password</label><br>
-							</form>
+
 						</div>
 						<div class="submit_btn my-4 text-center">
 							<button type="submit" class="btn btn-sm signInBtn px-3 text-light"><b>SIGN IN</b></button>

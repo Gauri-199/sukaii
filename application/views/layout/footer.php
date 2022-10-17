@@ -69,4 +69,5 @@
         </div>
     </footer>
 <?php $this->load->view('layout/js');?>
+<script>var baseURL = '<?=base_url()?>';</script>
 
