@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/css/style.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/css/index.css">
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+     />
     <!-- box icons link  -->
 
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
@@ -22,14 +24,14 @@
     <header id="" class='bg-white'>
         <div class="align-items-center border-bottom row">
             <div class="align-items-center col col-md-3 col-sm-6 d-flex">
-                <a href="./index.php" class=""> <img src="<?php echo base_url()?>assets/SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
+                <a href="./index.php" class=""> <img src="<?=base_url()?>assets/SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
                 <a href="#AllServicePackages"><button type="button" id="BookingBtn" class="badge-pill border-white btn btn-sm font-weight-bold mt-4 px-3 text-white d-none d-md-block themeBlueBg latoFont" style="font-size: 13px;">Book Now</button></a>
 
             </div>
             <div class="col-6 col-md-9 col-sm-6 hide_menu">
                 <div class="d-md-block d-none justify-content-end login_row mt-2 row w-100">
                     <ul class="d-flex float-right list-unstyled mb-2 align-content-center">
-                        <a href="./login.php" style="text-decoration: none;" class="pt-1">
+                        <a href="login.php" style="text-decoration: none;" class="pt-1">
                             <li class="login_row_list px-3">Login/Sign up</li>
                         </a>
                         <li class="login_row_list px-3 pt-1"><span class="p-2"><i class="fas fa-map-marker-alt"></i></span>Bangkok
@@ -64,7 +66,7 @@
                         </div>
                         <!-- <li class="menu_list  px-3"><a href="#WeMadeItsImple" class="text-dark font-weight-bold">Services </a></li> -->
                         <li class="menu_list px-3"><a href="./connectUs.php" class="text-dark font-weight-bold">Connect Us</a></li>
-                        <li class="menu_list px-3"><a href="./addCart.php" class="text-dark font-weight-bold">Cart</a></li>
+                        <li class="menu_list px-3"><a href="<?=base_url('addCart')?>" class="text-dark font-weight-bold">Cart</a></li>
 
                         <!--                    <li class="menu_list px-3"><a href="./sukaiiUser_profle.html" class="text-dark font-weight-bold">MY ACCOUNT</a></li>-->
                         <!--                    <li class="menu_list px-3"><a href="./partenerWithUs.html" class="text-dark font-weight-bold">PARTNERS</a>-->

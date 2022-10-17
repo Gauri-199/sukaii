@@ -335,6 +335,7 @@
         </div>
     </div>
 
+
 <!-- footer  -->
 
 	<?php $this->load->view("layout/footer"); ?>
@@ -355,3 +356,4 @@
 <!-- <script src="./js/index.js"></script> -->
 
 </html>
+

@@ -59,3 +59,10 @@ $route["lenLenCheckUp"]="OrdersController/lenLenCheckUp";
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route["BookingProcess"]="OrdersController/patientdetails";
+$route["orderSummary"]="OrdersController/orderSummary";
+$route["addCart"]="OrdersController/addCart";
+$route["connectUs"]="EnquiryController/connectUs";
+
+
