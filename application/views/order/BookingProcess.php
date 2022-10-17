@@ -228,7 +228,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <div class="rounded text-center schudule_time">
+                        <div class="rounded text-center schudule_time">git 
                             <small style="font-weight: 500;"> 09.30 AM</small>
                         </div>
                     </div>
