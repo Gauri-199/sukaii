@@ -23,7 +23,7 @@
             <div class="col-6 col-md-3">
                 <ul>
                     <li class="rubicFont"><b>Services</b></li>
-                    <a href="./covidRTPCRcheckup.php">
+                    <a href="../services/covidRTPCRcheckup.php">
                         <li>Covid RT-PCT Test</li>
                     </a>
                     <a href="./basicHeathjCheckup.php">
