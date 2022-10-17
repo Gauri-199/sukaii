@@ -89,5 +89,10 @@ class EnquiryController extends CI_Controller
 		$this->load->view('contactus/contact');
 	}
 
+	public function aboutUs()
+	{
+		$this->load->view('contactus/aboutUs');
+	}
+
 
 }
