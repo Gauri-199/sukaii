@@ -65,4 +65,7 @@ $route["orderSummary"]="OrdersController/orderSummary";
 $route["addCart"]="OrdersController/addCart";
 $route["connectUs"]="EnquiryController/connectUs";
 
+$route["BookingProcess"]="OrdersController/BookingProcess";
+$route["orderSummary"]="OrdersController/orderSummary";
+
 
