@@ -31,9 +31,20 @@
             <div class="col-6 col-md-9 col-sm-6 hide_menu">
                 <div class="d-md-block d-none justify-content-end login_row mt-2 row w-100">
                     <ul class="d-flex float-right list-unstyled mb-2 align-content-center">
-                        <a href="login.php" style="text-decoration: none;" class="pt-1">
-                            <li class="login_row_list px-3">Login/Sign up</li>
+						<?php
+						if (isset($this->session->user_session)) {
+						$username = $this->session->user_session->name;
+						?>
+                        <a href="<?=base_url('logout')?>" style="text-decoration: none;" class="pt-1">
+                            <li class="login_row_list px-3">Logout</li>
                         </a>
+							<?php
+						} else { ?>
+							<a href="<?=base_url('login')?>" style="text-decoration: none;" class="pt-1">
+								<li class="login_row_list px-3">Login/Sign up</li>
+							</a>
+						<?php }
+						?>
                         <li class="login_row_list px-3 pt-1"><span class="p-2"><i class="fas fa-map-marker-alt"></i></span>Bangkok
                         </li>
                         <li>

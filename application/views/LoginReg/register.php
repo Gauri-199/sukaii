@@ -83,7 +83,7 @@
            
         </div>
       <?php $this->load->view('layout/footer');?>
-	<script>var baseURL = '<?=base_url()?>';</script>
+
     </div>
 </body>
 
