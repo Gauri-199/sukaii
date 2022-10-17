@@ -17,6 +17,7 @@ class UserController extends CI_Controller
 		parent::__construct();
 		$this->load->model("UserModel");
 		$this->load->model("CustomerAddressModel");
+		$this->load->model("MasterModel");
 	}
 
 	public function index()
@@ -89,7 +90,6 @@ class UserController extends CI_Controller
 
 	public function loginVerification()
 	{
-
 		$username = $this->input->post("email");
 		$password = $this->input->post("password");
 		$token_id = $this->input->post("token_id");
@@ -166,16 +166,16 @@ class UserController extends CI_Controller
 
 	function registerUser()
 	{
-
 		$userSessionData = null;
-		$name = $this->input->post("full_name");
+		$fname = $this->input->post("fname");
+		$lname = $this->input->post("lname");
 		$mobile = $this->input->post("mobile");
 		$email = $this->input->post("email");
-		$gender = $this->input->post("gender");
+		/*$gender = $this->input->post("gender");*/
 		$password = $this->input->post("password");
-
-		if (!is_null($name) && !is_null($mobile) && !is_null($email)
-			&& !is_null($gender) && !is_null($password)) {
+		$address = $this->input->post("address1");
+        $name = $fname.' '.$lname;
+		if (!is_null($name) && !is_null($mobile) && !is_null($email) && !is_null($password)) {
 			$userCheck = $this->UserModel->checkUserExists(array("email"=>$email));
 			if ($userCheck->totalCount > 0){
 				$response["status"] = 201;
@@ -188,7 +188,8 @@ class UserController extends CI_Controller
 					"registration_type" => 1,
 					"user_type" => 2,
 					"contact" => $mobile,
-					"gender" => $gender
+					"address" => $address
+					/*"gender" => $gender*/
 				);
 				$resultObject = $this->UserModel->addUser($data);
 
@@ -493,6 +494,12 @@ class UserController extends CI_Controller
 			$response["body"] = "Failed to save";
 		}
 		echo json_encode($response);
+	}
+
+	//new add
+	public function forgotPasswordView()
+	{
+		$this->load->view('LoginReg/forgetPassword');
 	}
 }
 

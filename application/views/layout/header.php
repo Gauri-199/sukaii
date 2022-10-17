@@ -153,7 +153,7 @@
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <script src="./js/index.js"></script>
+    <script src="<?=base_url()?>assets/js/index.js"></script>
     <!-- <script src="./bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script>
         $("#MenuIconBtn").click(function() {

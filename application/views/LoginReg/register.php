@@ -18,9 +18,7 @@
             color: #ea088b;
             ;
         }
-        
-       
-        
+
         .register_btn button {
             background-color: #949090;
         }
@@ -28,7 +26,7 @@
 </head>
 
 <body>
-        <?php include_once('./header.php')?>
+        <?php $this->load->view('layout/header'); ?>
 <div class="container-fluid loginBgImage">
         <div class="row">
             <div class="col-md-5 mx-auto my-4" style="background: #C0ECED;
@@ -36,33 +34,33 @@
             border-radius: 8px;">
             <!-- <div class="col-md-10"> -->
                 <div class="login_form w-75 mx-auto">
-                    <form action="" method="post">
+                    <form  method="POST" id="registration_form" autocomplete="off">
                     <div class="logo text-center mb-1">
-                        <img src="./images/sukaii_logo.PNG" alt="" width="22%" class="">
+                        <img src="<?=base_url()?>assets/images/sukaii_logo.PNG" alt="" width="22%" class="">
                     </div>
                     <h4 class="text-center rubicFont mb-4" style="font-family: 'Rubik', sans-serif !important; font-weight: 600;">REGISTRATION</h4>
-                    <div class="username d-flex">
+                   <div class="username d-flex">
                         <div class="fname mr-1">
                             <label for="" class="username_lable mb-1"><h6 class="mb-0 pl-1">First Name</h6></label>
-                        <input type="text" class="user_name form-control mb-2">
+                        <input type="text" class="user_name form-control mb-2" name="fname" id="fname">
                         </div>
                         <div class="lname ml-1">
                             <label for="" class="username_lable mb-1"><h6 class="mb-0 pl-1">Last Name</h6></label>
-                        <input type="text" class="user_name form-control mb-2">
+                        <input type="text" class="user_name form-control mb-2" name="lname" id="lname">
                         </div>
-                        
                     </div>
+
                     <div class="email">
                         <label for="" class="email_lable mb-1"><h6 class="mb-0 pl-1">Email</h6></label>
-                        <input type="email" class="form-control email mb-2">
+                        <input type="email" class="form-control email mb-2" name="email" id="email">
                     </div>
                     <div class="password">
                         <label for="" class="password_lable mb-1"><h6 class="mb-0 pl-1">Password</h6></label>
-                        <input type="text" class="password_input form-control mb-2">
+                        <input type="password" class="password_input form-control mb-2" name="password" id="password">
                     </div>
                     <div class="contact ">
                         <label for="" class="contact_lable mb-1"><h6 class="mb-0 pl-1">Contact</h6></label>
-                        <input type="number" class="form-control contact mb-2">
+                        <input type="number" class="form-control contact mb-2" name="mobile" id="mobile">
                     </div>
                     <div class="address mb-3">
                         <h6 class="mb-0">ADDRESS <span><button type="button" class="btn btn-sm address_btn mb-1 ml-2" onclick="load_data()">Address <span><i class="fas fa-map-marker-alt pl-2"></i></span></button>
@@ -73,10 +71,10 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <button type="button" class="btn px-3 btn-sm register text-white mb-2" style="font-weight:500;">Register</button>
+                        <button type="submit" class="btn px-3 btn-sm register text-white mb-2" style="font-weight:500;">Register</button>
                     </div>
                     <div class="login_link">
-                        <p class="text-center"> Already Registered <a href="./login_page.html"><b class='login'>LOGIN</b></a> here</p>
+                        <p class="text-center"> Already Registered <a href="<?=base_url('login')?>"><b class='login'>LOGIN</b></a> here</p>
                     </div>
                 </form>
                 </div>
@@ -84,7 +82,8 @@
             </div>
            
         </div>
-      <?php include_once('./footer.php')?>
+      <?php $this->load->view('layout/footer');?>
+	<script>var baseURL = '<?=base_url()?>';</script>
     </div>
 </body>
 
