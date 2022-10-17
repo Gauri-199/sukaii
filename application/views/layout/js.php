@@ -25,9 +25,11 @@
 			async defer></script>
 
 <?php } ?>
+
 <?php if ($this->uri->segment(1) == "serviceOrder") { ?>
 	<script src="<?php echo base_url(); ?>assets/page/serviceOrder.js"></script>
 <?php } ?>
+
 <?php if ($this->uri->segment(1) == "user_manage_address") { ?>
 	<script src="<?php echo base_url(); ?>assets/page/address.js"></script>
 <?php } ?>
