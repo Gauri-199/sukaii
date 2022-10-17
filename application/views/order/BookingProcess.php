@@ -347,6 +347,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="row mx-0 mt-5 px-2 latoFont">
                 <!-- <h1 class='text-center col-12 mb-4 PackageHeadings'><b>Packages</b></h1> -->
                 <div class="col-12 col-md-4 px-1">

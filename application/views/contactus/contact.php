@@ -30,22 +30,22 @@
 </head> -->
 
 <body>
-<?php include_once('./header.php')?>
+<?php $this->load->view('layout/header');?>
 
     <div class="row mx-0 ">
         <div class="col-4 d-none d-md-block">
             <div class="d-flex align-items-center">
-                <img src="./images/whatsappcolor.png" alt="">
+                <img src="<?=base_url()?>assets/images/whatsappcolor.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative"
                     style="left: -19px; z-index: -1;">Whatsapp</div>
             </div>
             <div class="d-flex align-items-center">
-                <img src="./images/linecolor.png" alt="">
+                <img src="<?=base_url()?>assets/images/linecolor.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative"
                     style="left: -19px; z-index: -1;">Line</div>
             </div>
             <div class="d-flex align-items-center">
-                <img src="./images/mailcolor.png" alt="">
+                <img src="<?=base_url()?>assets/images/mailcolor.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative"
                     style="left: -19px; z-index: -1;">Mail</div>
             </div>
@@ -53,8 +53,8 @@
             <div class="pl-5 mt-3">
                 <h6>Follow Us</h6>
             <div class="">
-                <span><img src="./images/instaColorIcon.png" class="mr-3" alt=""></span>
-                <span><img src="./images/facebookColorIcon.png" alt=""></span>
+                <span><img src="<?=base_url()?>assets/images/instaColorIcon.png" class="mr-3" alt=""></span>
+                <span><img src="<?=base_url()?>assets/images/facebookColorIcon.png" alt=""></span>
             </div>
             </div>
 
@@ -74,7 +74,7 @@
     </div>
 
 
-    <?php include_once('./footer.php')?>
+    <?php $this->load->view('layout/footer');?>
     <!-- <div id="footer"></div>  -->
 </body>
 <script>
