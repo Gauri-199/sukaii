@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partener With Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <!-- <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script> -->
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/partenarWithUs.css">
+    <!-- box icons link  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/boxicons @2.1.1/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- google font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    #btnValid,
+    #btnrefresh {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    #txtCaptcha {
+        background-image: url('./images/muted_bg.jpeg');
+        font-family: 'Shrikhand', cursive;
+    }
+    
+    #txtCaptcha:focus {
+        border: none;
+    }
+</style>
+
+<body onload="GenerateCaptcha();">
+    <header id="Header"></header>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-9 pl-0 m-auto">
+                <h4 class="border-bottom border-dark font-weight-bold pb-1 pl-4 sukaii_pink_color" style="font-family: var(--primaryText);">PARTNER WITH US</h4>
+                <p class="pl-4 small" style="font-family: var(--secondryText);">Thank you for your interest in working with Sukaii. Please compete the form below to tell us more about you and your company</p>
+            </div>
+            <div class="col-3">
+                <img src="./SUKAII Icons/Partner-with-us.png" class="position-absolute parternerWsImages" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container px-4">
+        <!-- form section inside a partners with us  -->
+        <div class="row">
+            <div class="col-md-8 col-12 m-md-auto">
+                <form class="mt-3">
+                    <div class="form-group mb-2">
+                        <label for="name_input " class="pwuFormlabel">YOUR NAME</label>
+                        <input type="text" class="form-control pwuForminput" id="name_input">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+
+                    <div class="form-group mb-2">
+                        <label for="Company_name_input" class="pwuFormlabel">COMPANY NAME</label>
+                        <input type="text" class="form-control pwuForminput" id="Company_name_input">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="DESIGNATION " class="pwuFormlabel">DESIGNATION</label>
+                        <input type="text" class="form-control pwuForminput" id="DESIGNATION">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="Conpany_email" class="pwuFormlabel">COMPANY E-MAIL</label>
+                        <input type="email" class="form-control pwuForminput" id="Conpany_email">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="Conpany_phone" class="pwuFormlabel">COMPANY PHONE</label>
+                        <input type="number" class="form-control pwuForminput" id="Conpany_phone">
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="Conpany_email" class="pwuFormlabel" style="font-size: 16px;">Services</label>
+
+                        <div class="form-control form-group " id="pws_service" style="border-radius:7px; border: 2px solid; padding-bottom: 0px;">
+                            <div class="align-items-baseline d-flex selector">
+                                <input name="" class="border-0 form-control pb-2 py-0" id="Location">
+                                </input>
+                                <i class="fa-solid fa-caret-down" style="color: var(--themeGreen);"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="select_location border p-2 mb-3 rounded" id="pws_dd_service_value" style="background: #ededed; width: 95%; margin: auto; display: none;" id="">
+                        <p class="form-control mb-2 mx-auto text-light" style="border-radius: 7px; width: 95%; background: #ec098d66;">Diagnostic Lab</p>
+                        <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Nurse Service</p>
+                        <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Physiotherapy</p>
+                        <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Elderly Care</p>
+                        <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Medical Equipment Rentals</p>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="Questions_comments" class="font-weight-bold mb-0 mt-1 pwuFormlabel text-dark rounded" style="font-size: larger; font-family: var(--primaryText);">QUESTIONS / COMMENTS</label>
+                        <textarea name="" id="Questions_comments" class="pwuForminput rounded form-control" rows="3"></textarea>
+                    </div>
+
+
+                    <div class="form-group mb-2">
+                        <p for="capcha" class="mb-0 text-dark" style="font-weight:600;"> CAPCHA</p>
+                        <small>This question is for testing wheather or not you are a human
+                                    visitor and to prevent auotomated spam submissions</small>
+                        <div>
+                            <div style="border: 1px solid black; background-color: #dce7f1;" class="rounded">
+                                <!-- <h2>Generating Captcha Demo</h2> -->
+                                <div class="d-flex my-3 px-4">
+                                    <input type="text" id="txtCaptcha" readonly class=" form-control text-center" style=" font-size: 20px;" />
+                                    <button class="btn btn-primary ml-2" type="button" id="btnrefresh" onclick="GenerateCaptcha();"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                </div>
+                                <div class="border d-flex mx-4 align-items-center bg-white">
+                                    <input type="text" id="txtCompare" placeholder="ENTER CAPCHA" class="form-control border-0 bg-transparent" />
+                                    <button id="btnValid" type="button" style=" padding: 0.1rem 0.75rem; height: 29px !important;" class="btn btn-sm btn-success mr-1" onclick="alert(ValidCaptcha());">Submit</button>
+
+                                </div>
+
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="submitpwuForm text-center mt-4">
+        <button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light" data-toggle="modal" data-target="#pwusuccess">Submit</button>
+    </div>
+    <!-- ssuccces form popup  -->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="pwusuccess" tabindex="-1" role="dialog" aria-labelledby="pwusuccess" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="m-auto modal-content w-75" style="background-color: var(--themeGreen);">
+                <div class="modal-body">
+                    <h5 class="font-weight-bold text-center sukaii_pink_color" style="font-family: var(--primaryText);">THANK YOU !</h5>
+                    <p class="text-center text-light" style="font-family: var(--secondryText);">for enquiring with us. We shall connect with you shortly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </form>
+
+
+    </div>
+</body>
+<script>
+    $(function() {
+        $("#Header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+    $("#pws_service").click(function() {
+        $("#pws_dd_service_value").slideToggle();
+    });
+</script>
+<script type="text/javascript">
+    /* Function to Generat Captcha */
+    function GenerateCaptcha() {
+        var chr1 = Math.ceil(Math.random() * 10) + '';
+        var chr2 = Math.ceil(Math.random() * 10) + '';
+        var chr3 = Math.ceil(Math.random() * 10) + '';
+
+        var str = new Array(4).join().replace(/(.|$)/g, function() {
+            return ((Math.random() * 36) | 0).toString(36)[Math.random() < .5 ? "toString" : "toUpperCase"]();
+        });
+        var captchaCode = str + chr1 + ' ' + chr2 + ' ' + chr3;
+        document.getElementById("txtCaptcha").value = captchaCode
+    }
+
+    /* Validating Captcha Function */
+    function ValidCaptcha() {
+        var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+        var str2 = removeSpaces(document.getElementById('txtCompare').value);
+
+        if (str1 == str2) return true;
+        return false;
+    }
+
+    /* Remove spaces from Captcha Code */
+    function removeSpaces(string) {
+        return string.split(' ').join('');
+    }
+</script>
+
+</html>

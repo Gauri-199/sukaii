@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <header id="Header"></header>
+
+    <div class="container pt-3 pb-2" style="border-bottom: 2px solid gray;">
+        <div class="row">
+            <div class="align-items-center col-12 d-flex justify-content-between small" style="font-family: var(--primaryText);">
+                <div class="test_name d-flex">
+                    <span><a href="./sukaiiUser_profle.html" class="text-dark">   <i class="fa-solid fa-left-long pr-3"></i></a></span>
+
+                    <h6 style="font-size: .9rem;" class="mb-0 font-weight-bold">Help Center</h6>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container">
+        <div class="row pt-3" style="font-size:smaller">
+            <div class="col-12 ">
+                <p>We apologize that the service was not delivered as expected. All Sukaii professional are trained to deliver a standardized experience.
+                </p>
+                <p>We request you to please tell us about the issue in details so that we cam quickly take an approproate action against the professional
+                </p>
+                <textarea name="" placeholder="Please tell us your issue" id="" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+    <div class="mt-5 text-center">
+        <button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light" data-toggle="modal" data-target="#help_confirm">Send</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="help_confirm" tabindex="-1" role="dialog" aria-labelledby="help_confirm" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="m-auto modal-content w-75" style="background-color: var(--themeGreen);">
+                <div class="modal-body">
+                    <h5 class="font-weight-bold text-center sukaii_pink_color" style="font-family: var(--primaryText);">Your massage send Successfuly</h5>
+                    <p class="text-center text-light" style="font-family: var(--secondryText);">We will Connect with you as soon as possible</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function() {
+        $("#Header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+</script>
+
+</html>

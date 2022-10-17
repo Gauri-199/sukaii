@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .card {
+            width: 400px;
+            height: 300px;
+            box-shadow: 0px 5px 10px 0px #d2dae3;
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        .card h6 {
+            font-size: 20px
+        }
+
+        .inputs input {
+            width: 40px;
+            height: 40px
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border: 2px solid #00b3b7
+        }
+
+        .validate {
+            height: 40px;
+            background-color: #ec098d;
+            width: 140px
+        }
+    </style>
+</head>
+
+<body>
+    <header id="Header" class="d-none d-md-block"></header>
+
+    <div class="container" style="border-bottom: 2px solid gray;">
+        <div class="row m-2 my-3">
+            <div class="align-items-baseline col-md-12 d-flex justify-content-between px-0">
+                <span></span>
+                <span style="font-family: var(--primaryText);"><b>My Bookings</b></span>
+                <span><a href="./sukaiiUser_profle.html"><i style="font-size: 20px; color: var(--themeGreen);"
+                            class="fa-solid fa-bars"></i></a></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="container" style="border-bottom: 2px solid gray;">
+        <div class="row my-1">
+            <div class="col-12 small" style="font-family: var(--primaryText);">My Bookings</div>
+        </div>
+    </div>
+    <div class="container py-3" style="border-bottom: 2px solid gray;">
+        <div class="row">
+            <div class="align-items-center col-12 d-flex justify-content-between small"
+                style="font-family: var(--primaryText);">
+                <div class="test_name">
+                    <h6 style="font-size: .9rem;" class="mb-0 font-weight-bold">Covid Test</h6>
+                    <small class="text-muted" style="font-size: 11px; ">Thu, 8th Feb. 2022 at 10.00 AM</small>
+                </div>
+                <button type="button" data-toggle="modal" data-target="#viewOTPModel"
+                    class="btn px-2 text-success small btn-sm"
+                    style="background-color: #e5e3e3; padding: .15rem;"><small>On Going</small></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="align-items-center justify-content-between col-12 d-flex mt-2">
+                <div class="image_section d-flex align-items-center">
+                    <img src="./images/user_img.png" class=" rounded w-25" alt="">
+                    <div class="name pl-3">
+                        <p class="small font-weight-bold mb-0 ">Nattha Kulkamthorn</p>
+                        <span class="mt-1 small"><i class="fa-solid fa-star sukaii_pink_color"></i>4.49</span>
+                    </div>
+                </div>
+                <div class="chat_section">
+                    <span style="padding: 9px 11px;" class="border-dark border rounded-circle"><i
+                            class="text-muted fa-solid fa-comment-dots"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-1 report text-right">
+            <span class="small" data-toggle="modal" data-target="#enterOTPModel" id="verifyOTP"><i
+                    class="fa-solid fa-pen-to-square pr-2" style="font-size: 18px; color: #00b3b7;"></i>Verify
+                OTP</span>
+        </div>
+    </div>
+    <div class="container pt-3 pb-0" style="border-bottom: 2px solid gray;">
+        <div class="row">
+            <div class="align-items-center col-12 d-flex justify-content-between small"
+                style="font-family: var(--primaryText);">
+                <div class="test_name">
+                    <h6 style="font-size: .9rem;" class="mb-0 font-weight-bold">Complete Blood Health check up</h6>
+                    <small class="text-muted" style="font-size: 11px; ">Thu, 1st Feb. 2022 at 10.00 AM</small>
+                </div>
+                <button type="button" class="btn px-2 small btn-sm sukaii_pink_color"
+                    style="background-color: #e5e3e3; padding: .15rem;"><small>Completed</small></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="image_section ">
+                    <div class="name">
+                        <a href="#" id="OrderNumber" style="text-decoration: none; color: #00b3b7;">
+                            <p class="font-weight-bold my-2">ORD-001 <span class="ml-1"><i
+                                        class="fa-solid fa-chevron-down"></i></span></p>
+                        </a>
+                        <p class="mb-2">Sample Collector allocated soon</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       
+        <div class="extraDetails pb-3 " style="display: none;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex">
+                        <span class="mr-2"><i class="fa-solid fa-location-crosshairs"
+                                style="color: #00b3b7;"></i></span>
+                        <p class="mb-0" style="font-size: smaller;">Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="align-items-end col-12 d-flex justify-content-between">
+                    <div class="">
+                        <div class="totalAmount font-weight-bold">
+                            THB 600
+                        </div>
+                        <div class="paymentStatus">
+                            <div class="badge badge-success">Completed</div>
+                        </div>
+                    </div>
+                    <div class="mt-1 report text-right">
+                        <span class="small"><a href="#" style="text-decoration: none;"> <span><i
+                                        class="fa-solid fa-file-invoice"></i></span> View Recipt</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-3" style="border-bottom: 2px solid gray;">
+        <div class="row">
+            <div class="align-items-center col-12 d-flex justify-content-between small"
+                style="font-family: var(--primaryText);">
+                <div class="test_name">
+                    <h6 style="font-size: .9rem;" class="mb-0 font-weight-bold">Basic Blood Health check up</h6>
+                    <small class="text-muted" style="font-size: 11px; ">Thu, 1st Feb. 2022 at 10.00 AM</small>
+                </div>
+                <button type="button" class="btn px-2 small btn-sm sukaii_pink_color"
+                    style="background-color: #e5e3e3; padding: .15rem;"><small>Payment Failed</small></button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="enterOTPModel" tabindex="-1" role="dialog" aria-labelledby="enterOTPModel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0" style="background-color: transparent;">
+                <div class="modal-body">
+                    <div class="container h-100 d-flex justify-content-center align-items-center">
+                        <div class="position-relative">
+                            <div class="align-items-center border-0 card d-flex justify-content-center p-2 text-center">
+                                <h6 class="" style="color: #00b3b7;">Please enter the OTP to verify your Service</h6>
+                                <div> <span>A code has been sent to</span> <small>*******9897</small> <br></div>
+                                <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                    <input class="m-2 text-center form-control rounded" type="text" id="first"
+                                        maxlength="1" autofocus />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="second"
+                                        maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="third"
+                                        maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="fourth"
+                                        maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="fifth"
+                                        maxlength="1" />
+                                    <input class="m-2 text-center form-control rounded" type="text" id="sixth"
+                                        maxlength="1" />
+                                </div>
+                                <div class="mt-4"> <button id="getVerify"
+                                        class="badge-pill btn font-weight-bold px-4 text-light validate"
+                                        data-toggle="modal" data-target="#velidateModel">Validate</button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="velidateModel" tabindex="-1" role="dialog" aria-labelledby="velidateModel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="m-auto modal-content w-75" style="background-color: var(--themeGreen);">
+                <div class="modal-body">
+                    <h5 class="font-weight-bold text-center sukaii_pink_color" style="font-family: var(--primaryText);">
+                        Your massage send Successfuly</h5>
+                    <p class="text-center text-light" style="font-family: var(--secondryText);">We will Connect with you
+                        as soon as possible</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function () {
+        $("#Header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+    // $("#").click(function () {
+    //     $("#").abc();
+    // });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+        function OTPInput() {
+            const inputs = document.querySelectorAll('#otp > *[id]');
+            console.log(inputs);
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('keydown', function (event) {
+                    if (event.key === "Backspace") {
+                        inputs[i].value = '';
+                        if (i !== 0) inputs[i - 1].focus();
+                    } else {
+                        if (i === inputs.length - 1 && inputs[i].value !== '') {
+                            return true;
+                        } else if ((event.keyCode > 47 && event.keyCode < 58) || (event.keyCode >= 96 && event.keyCode <= 105)) {
+                            inputs[i].value = event.key;
+                            if (i !== inputs.length - 1) inputs[i + 1].focus();
+                            event.preventDefault();
+                        } else if (event.keyCode > 64 && event.keyCode < 91) {
+                            inputs[i].value = String.fromCharCode(event.keyCode);
+                            if (i !== inputs.length - 1) inputs[i + 1].focus();
+                            event.preventDefault();
+                        }
+                    }
+                });
+            }
+        }
+        OTPInput();
+    });
+
+    $("#getVerify").click(function () {
+        // $("#enterOTPModel").hide();
+        $('#enterOTPModel').modal('toggle');
+        // $("#velidateModel").show();
+        // myModal.hide()
+    });
+
+    $("#OrderNumber").click(function () {
+        $(".extraDetails").slideToggle();
+    });
+</script>
+
+</html>

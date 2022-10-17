@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid PCR Schoudle</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <!-- animate css link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<style>
+    /* .list {
+        background: #efefef;
+    }
+    
+    .list input {
+        accent-color: #ea088b;
+    }
+    
+    .list label {
+        color: #ea088b;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    .patient_details[placeholder] {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .schedule_day {
+        border: 1px solid #9f9f9f;
+        border-radius: 7px;
+        width: 15%;
+        margin: 0% 3.5px;
+        max-width: 15%;
+    }
+    
+    .totalDAys .schedule_day::selection {
+        color: red;
+        background-color: var(--iconbgColor);
+    }
+    
+    .schudule_time {
+        border: 1px solid #9f9f9f;
+    }
+    /* login */
+    
+    .register a {
+        color: #ea088b;
+        ;
+    }
+    
+    .submit_btn button {
+        background-color: #ea088b;
+    }
+    
+    .register_btn button {
+        background-color: #949090;
+    }
+    
+    .login_register form input {
+        border: 2ox solid black !important;
+    }
+    
+    #userGender:focus {
+        box-shadow: unset;
+    }
+    
+    #Location:focus {
+        box-shadow: 0px 0px 0px 0px !important;
+    }
+    /* ligin ./  */
+</style>
+
+<body>
+
+    <!-- Loginform  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="login_register">
+                    <h5 class="mb-4 mt-5 text-center text-dark font-weight-bold" style="font-family:var(--primaryText)">SIGN UP</h5>
+                    <form action="">
+                        <div class="user_name mb-3">
+                            <p class="mb-0 text-dark" style="font-weight: 500; font-size: 15px;">FULL NAME</p>
+                            <input type="text" class="border-dark form-control">
+                        </div>
+                        <div class="user_mobile mb-3">
+                            <p class="mb-0 text-dark" style="font-weight: 500; font-size: 15px;">MOBILE NUMBER</p>
+                            <input type="number" class="border-dark form-control">
+                        </div>
+                        <div class="user_email mb-3">
+                            <p class="mb-0 text-dark" style="font-weight: 500; font-size: 15px;">E-MAIL ID</p>
+                            <input type="email" class="border-dark form-control">
+                        </div>
+                        <div class="form-group mb-0 mt-3">
+                            <label for="Conpany_email" class="pwuFormlabel mb-0" style="font-size: 16px;">Gender</label>
+
+                            <div class="form-control form-group rounded border-dark mb-0 selectGender" id="gender" style="padding-bottom: 0px;">
+                                <div class="align-items-baseline d-flex selector">
+                                    <input name="" class="border-0 form-control pb-2 py-0" id="Location">
+                                    </input>
+                                    <i class="fa-solid fa-caret-down" style="color: var(--themeGreen);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select_location border p-2 mb-3 rounded" id="gender_value" style="background: #ededed; width: 95%; margin: auto; display: none;" id="">
+                            <p class="form-control mb-2 mx-auto text-light" style="border-radius: 7px; width: 95%; background: #ec098d66;">Male</p>
+                            <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Female</p>
+                            <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Trans</p>
+                        </div>
+                        <div class="password mt-3 mb-3">
+                            <p class="mb-0 text-dark" style="font-weight: 500; font-size: 15px;">PASSWORD</p>
+                            <div class="align-items-center rounded border border-dark d-flex input pr-2">
+                                <input type="password" class=" border-0 form-control">
+                                <span><i class="fa-solid fa-lock sukaii_pink_color"></i></span>
+                            </div>
+                        </div>
+                        <div class="confirm_password mb-3">
+                            <p class="mb-0 text-dark" style="font-weight: 500; font-size: 15px;">CONFIRM PASSWORD</p>
+                            <div class="align-items-center rounded border border-dark d-flex input pr-2">
+                                <input type="password" class=" border-0 form-control">
+                                <span><i class="fa-solid fa-lock sukaii_pink_color"></i></span>
+                            </div>
+                        </div>
+                        <div class="submit_btn my-4 text-center">
+                            <a href="./newSukaiiLoginPage.html"><button type="button"  class="btn text-light btn-sm" style="font-family:var(--primaryText)"><b>REGISTER</b></button></a>
+                        </div>
+                    </form>
+                    <p style="font-weight: 500;" class="text-center">Already have an account? <a href="./newSukaiiLoginPage.html" style="font-family: var(--secondryText);" class="sukaii_pink_color">Login here</a> </p>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div id="footer"></div>
+
+    </div>
+</body>
+<script>
+    $("#gender").click(function() {
+        $("#gender_value").slideToggle();
+    });
+</script>
+
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+</html>

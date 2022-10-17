@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid PCR Schoudle</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <!-- animate css link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<style>
+    .list {
+        background: #efefef;
+    }
+    
+    .list input {
+        accent-color: #ea088b;
+    }
+    
+    .list label {
+        color: #ea088b;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    .patient_details[placeholder] {
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    .schedule_day {
+        border: 1px solid #9f9f9f;
+        border-radius: 7px;
+        width: 15%;
+        margin: 0% 3.5px;
+        max-width: 15%;
+        font-size: 14px;
+        padding: 4px 0px;
+    }
+    
+    .totalDAys .schedule_day::selection {
+        color: red;
+        background-color: var(--iconbgColor);
+    }
+    
+    .schudule_time {
+        border: 1px solid #9f9f9f;
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <div class="text-center">
+                    <img src="./SUKAII Icons/BASIC-HEALTH-CHECK-UP.png" style="width: 33%;" class="mt-3 covid_pcr_Form_icon" alt="">
+                    <h6 style="color: var(--themePink);" class="font-weight-bold mt-2 mb-3">BASIC HEALTH CHECK UP</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="row  mb-3">
+            <div class="col-12">
+                <div class="row col-md-8 m-auto">
+                    <div class="col-6 mb-3 pr-2">
+                        <p class="mb-0" style="font-weight: 500;">NAME</p>
+                        <input type="text" name="" id="patient_name" placeholder="ENTER YOUR FULL NAME" class="form-control border-dark patient_details">
+                    </div>
+                    <div class="col-6 mb-3 pl-0">
+                        <p class="mb-0" style="font-weight: 500;">NUMBER</p>
+                        <input type="number" name="" id="patient_number" placeholder="ENTER YOUR MOBILE NUMBER" class="form-control border-dark patient_details">
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group mb-0">
+                            <label for="Conpany_email" class="pwuFormlabel mb-0" style="font-size: 16px;">LOCATION</label>
+
+                            <div class="form-control form-group m-0 rounded border-dark" id="pws_service" style="padding-bottom: 0px;">
+                                <div class="align-items-baseline d-flex selector">
+                                    <input type="number" name="" id="serviceBookingLocation" placeholder="Services" class="border-0 form-control pb-2 py-0 patient_details">
+
+                                    <i class="fa-solid fa-caret-down" style="color: var(--themeGreen);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select_location border p-2 mb-3" id="servuceBooking_location_ddvalue" style="border-radius: 7px; background: #ededed; width: 95%; margin: auto; display: none;" id="">
+                            <p class="form-control mb-2 mx-auto text-light" style="border-radius: 7px; width: 95%; background: #ec098d66;">Bang Bon</p>
+                            <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Bang Khae</p>
+                            <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Bang Khun Thian</p>
+                            <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Bangkok Noi</p>
+                            <p class="border-dark form-control mb-2 mx-auto" style="border-radius: 7px; width: 95%;">Bang Phlat</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-12 mt-3 mb-1">
+                        <div class="mb-2">
+                            <p class="mb-0" style="font-weight: 500;">SCHEDULE</p>
+                            <input type="number" id="pic_schedule_time" name="" placeholder="DATE AND TIME" class="form-control border-dark patient_details">
+                            <small class="" style="color: #a9a9a9!important;">Your service will take approx 30 mins.</small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="totalDAys position-relative" style="display: none;" id="schedule_date">
+                    <div class="visible_days">
+                        <div class="schedule_day_div d-flex align-items-center">
+                            <div class="font-weight-bold schedule_day text-center" style="background-color: var(--iconbgColor);">
+                                <p class="mb-0 ">TUE</p>
+                                <p class="mb-0">01</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">THU</p>
+                                <p class="mb-0">02</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">FRI</p>
+                                <p class="mb-0">03</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">SAT</p>
+                                <p class="mb-0">04</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">SUN</p>
+                                <p class="mb-0">05</p>
+                            </div>
+                            <div class=" font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">MON</p>
+                                <p class="mb-0">06</p>
+                            </div>
+                            <span><i id="show_2nd_week" class="fa-solid pl-1 fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="hidden_days position-absolute" style="display: none; top: 0; right: 0; left: 0;">
+                        <div class="Hidden_schedule_day_div d-flex align-items-center">
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">TUE</p>
+                                <p class="mb-0">07</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">THU</p>
+                                <p class="mb-0">08</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">FRI</p>
+                                <p class="mb-0">09</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">SAT</p>
+                                <p class="mb-0">10</p>
+                            </div>
+                            <div class="font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">SUN</p>
+                                <p class="mb-0">11</p>
+                            </div>
+                            <div class=" font-weight-bold schedule_day text-center">
+                                <p class="mb-0 ">MON</p>
+                                <p class="mb-0">12</p>
+                            </div>
+                            <span><i id="show_1nd_week" class="fa-solid pl-1 fa-caret-right"></i></span>
+                        </div>
+                    </div>
+                    <small class="" style="color: #a9a9a9!important;">Free Cancellation before 2 hrs.</small>
+                </div>
+                <div class="row mt-3 schedule_time" style="display: none;">
+                    <div class="col-3 mb-2">
+                        <div class="rounded text-center schudule_time" style="background-color: var(--iconbgColor);">
+                            <small style="font-weight: 500;"> 07.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 07.30 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 08.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 08.30 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 09.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 09.30 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 10.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 10.30 AM</small>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-4 schedule_time" style="display: none;">
+                    <div class="col-3 mb-2">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 01.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 01.30 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 02.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 02.30 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 03.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 03.30 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 04.00 AM</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="rounded text-center schudule_time">
+                            <small style="font-weight: 500;"> 04.30 AM</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="submitpwuForm text-center mt-4">
+                    <!-- <button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light" data-toggle="modal" data-target="#pwusuccess">CONFIRM</button> -->
+                    <a href="./sukaii_paytment_invoice.html">
+                        <button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light">CONFIRM</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="pwusuccess" tabindex="-1" role="dialog" aria-labelledby="pwusuccess" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="m-auto modal-content w-75" style="background-color: var(--themeGreen);">
+                    <div class="modal-body">
+                        <p class="text-center text-light" style="font-family: var(--secondryText);">We do not service your area at the moment.</p>
+                        <h5 class="font-weight-bold text-center sukaii_pink_color" style="font-family: var(--primaryText);">SEE YOU SOON !!!</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    const mySelectedServices = [];
+    $(function() {
+        $("#Header").load("header.html");
+        $("#footer").load("footer.html");
+        fetchServices();
+    });
+</script>
+<script>
+    $("#show_2nd_week").click(function() {
+        $(".hidden_days").removeClass('animate__animated animate__bounceOutLeft');
+        $(".hidden_days").addClass('animate__animated animate__fadeInRightBig');
+        $(".visible_days").removeClass('animate__animated animate__fadeInRightBig');
+        $(".visible_days").addClass('animate__animated animate__bounceOutLeft');
+        $(".hidden_days").show();
+        $("visible_days").hide();
+    });
+
+
+
+    $("#show_1nd_week").click(function() {
+        $(".hidden_days").removeClass('animate__animated animate__fadeInRightBig');
+        $(".hidden_days").addClass('animate__animated animate__bounceOutLeft');
+        $(".visible_days").removeClass('animate__animated animate__bounceOutLeft');
+        $(".visible_days").addClass('animate__animated animate__fadeInRightBig');
+    });
+
+    $("#pic_schedule_time").click(function() {
+        $("#schedule_date").show();
+    })
+    $(".schedule_day").click(function() {
+        $(".schedule_time").show();
+    })
+    $("#serviceBookingLocation").click(function() {
+        $("#servuceBooking_location_ddvalue").slideToggle();
+    })
+
+
+    var selectedday = document.querySelectorAll('.schedule_day');
+    // console.log(selectedday);
+    for (let i = 0; i < selectedday.length; i++) {
+        selectedday[i].addEventListener("click", view_row_function.bind(this, selectedday[i]));
+    }
+</script>
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+</html>
