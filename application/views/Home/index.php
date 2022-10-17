@@ -163,7 +163,10 @@
                         </ul>
                     </div>
                     <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+					<a href="<?php echo base_url('covidRTPCRcheckup')?>"
+                                    style=" text-decoration: none;" class="text-info">
                         <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+						</a>
                     </button>
                     <div class='border-0 mt-3'>
                         <div class="OfferPrice">
@@ -174,11 +177,10 @@
 
                             <div class="price  text-center text-white"
                                 style="width: 65%; border-radius:0px 8px 8px 0px;">
-                                <a href="<?php echo base_url('covidRTPCRcheckup')?>"
-                                    style="color:white !important; text-decoration: none;">
+                                
                                     <span class='small'>EXCLUSIVE OFFER</span>
                                     <h6>THB 2000</h6>
-                                </a>
+                                
                             </div>
 
                         </div>
@@ -206,7 +208,9 @@
                         </ul>
                     </div>
                     <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+					<a href="<?php echo base_url('basicHeathjCheckup')?>" style="text-decoration: none;" class="text-info">
                         <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+						</a>
                     </button>
                     <div class='border-0 mt-3'>
                         <div class="OfferPrice">
@@ -217,11 +221,10 @@
 
                             <div class="price  text-center text-white"
                                 style="width: 65%; border-radius:0px 8px 8px 0px;">
-                                <a href="<?php echo base_url('basicHeathjCheckup')?>"
-                                    style="color:white !important; text-decoration: none;">
+                                
                                     <span class='small'>EXCLUSIVE OFFER</span>
                                     <h6>THB 2000</h6>
-                                </a>
+                               
                             </div>
 
                         </div>
@@ -250,7 +253,9 @@
                         </ul>
                     </div>
                     <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+					<a href="<?php echo base_url('completeHealthCheckup');?>" style="text-decoration: none;" class="text-info">
                         <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+						</a>
                     </button>
                     <div class='border-0 mt-3'>
                         <div class="OfferPrice">
@@ -261,11 +266,10 @@
 
                             <div class="price  text-center text-white"
                                 style="width: 65%; border-radius:0px 8px 8px 0px;">
-                                <a href="<?php echo base_url('completeHealthCheckup');?>"
-                                    style="color:white !important; text-decoration: none;">
+                                
                                     <span class='small'>EXCLUSIVE OFFER</span>
                                     <h6>THB 2000</h6>
-                                </a>
+                              
                             </div>
 
                         </div>
@@ -290,7 +294,9 @@
                         </ul>
                     </div>
                     <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+					<a href="<?php echo base_url('lenLenCheckUp')?>" style=" text-decoration: none;" class="text-info">
                         <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+						</a>
                     </button>
                     <div class='border-0 mt-3'>
                         <div class="OfferPrice">
@@ -301,10 +307,10 @@
 
                             <div class="price  text-center text-white"
                                 style="width: 65%; border-radius:0px 8px 8px 0px;">
-                                <a href="<?php echo base_url('lenLenCheckUp')?>" style="color:white !important; text-decoration: none;">
+                                
                                     <span class='small'>EXCLUSIVE OFFER</span>
                                     <h6>THB 2000</h6>
-                                </a>
+                                
                             </div>
 
                         </div>
