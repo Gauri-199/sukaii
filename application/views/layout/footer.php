@@ -1,4 +1,4 @@
-    <footer style='background: #00B3B7' class="latoFont">
+<footer style='background: #00B3B7' class="latoFont">
         <div class="row mx-0">
             <div class="col-6 col-md-3 text-center">
                 <a href="./index.php">
@@ -68,3 +68,5 @@
             <p class='text-center mb-0'> Copyright 2022 | GBtech</p>
         </div>
     </footer>
+<?php $this->load->view('layout/js');?>
+

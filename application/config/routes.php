@@ -60,12 +60,166 @@ $route["lenLenCheckUp"]="OrdersController/lenLenCheckUp";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route["BookingProcess"]="OrdersController/patientdetails";
+
+// Login and registration
+
+$route['login'] = 'UserController/login';
+$route['forgotPasswordView'] = 'UserController/forgotPasswordView';
+$route['loginVerification'] = 'UserController/loginVerification';
+$route['register'] = 'UserController/register';
+$route['registerUser'] = 'UserController/registerUser';
+$route['logout'] = 'UserController/logout';
+
+///new add
+// profile
+$route['user_profile_menus'] = 'UserController/userProfileMenus';
+$route['user_manage_address'] = 'UserController/userManageAddress';
+$route['user_manage_address/(:any)'] = 'UserController/userManageAddress/$1';
+$route['create_address'] = 'UserController/createAddress';
+$route['add_user_address'] = 'UserController/addUserAddress';
+$route['delete_user_address'] = 'UserController/deleteUserAddress';
+$route['sukaii_help_center'] = 'UserController/helpCenter';
+$route['sendIssue'] = 'AdminController/sendIssue';
+
+// enquiry
+$route['save_enquiry'] = 'EnquiryController/saveEnquiry';
+$route["deleteEnquiry"] = "EnquiryController/deleteEnquiry";
+
+// Orders route
+$route['serviceOrder/(:num)'] = 'OrdersController/serviceOrder/$1';
+$route['placeOrder'] = 'OrdersController/placeOrder';
+$route['insertOrder'] = 'OrdersController/insertOrder';
+$route['updateOrderStatus'] = 'OrdersController/updateOrderStatus';
+$route['getTimeSlot'] = 'OrdersController/getTimeSlot';
+$route["viewCart"]="OrdersController/viewCart";
+$route['orderSummary'] = 'OrdersController/orderSummary';
+$route['orderSummary/(:num)'] = 'OrdersController/orderSummary/$1';
+$route['rescheduleOrder/(:num)/(:num)/(:any)'] = 'OrdersController/rescheduleOrder/$1/$2/$3';
+$route['updateOrder'] = 'OrdersController/updateOrder';
+
+
+$route["my_booking"]="OrdersController/myBookings";
+$route["getMyBookings"]="OrdersController/getMyBookings";
+$route["viewReport"]="ExcelController/getExcelData";
+$route["viewReciept/(:any)/(:any)"]="OrdersController/viewReciept/$1/$2";
+$route["viewPaymentReciept/(:any)"]="OrdersController/viewPaymentReciept/$1";
+$route["viewPaymentRecieptDetails/(:any)"]="OrdersController/viewPaymentRecieptDetails/$1";
+$route["updateOrderStatusOnUpload"]="OrdersController/updateOrderStatusOnUpload";
+
+$route["updateCart"]="OrdersController/updateCart";
+$route["removeCartItem"]="OrdersController/removeCartItem";
+
+// Card Route
+
+$route["previousPayment"] = "CardController/previousPayment";
+$route["addCardForm"] = "CardController/addCardForm";
+$route["addCardDetails"] = "CardController/addCardDetails";
+// admin
+
+$route['getAllOrders'] = 'OrdersController/getAllOrders';
+$route['getAllUser'] = 'UserController/getAllUser';
+$route['getAllEnquiries'] = 'EnquiryController/getAllEnquiries';
+$route['getAllPartner'] = 'PartnersController/getAllPartner';
+$route['logout'] = 'UserController/logout';
+$route['deletePartner'] = 'PartnersController/deletePartner';
+
+
+// partner
+$route["partner_with_us"]="PartnersController/index";
+$route["addPartners"]="PartnersController/addPartners";
+
+
+// My profile
+// Service
+$route["covid_pcr"]="OrdersController/covidPCRHome";
+$route["basic_health_test"]="OrdersController/basicHealthTest";
+$route["complete_health_test"]="OrdersController/completeHealthTest";
+$route["len_len_test"]="OrdersController/lenLenTest";
+
+
+//Admin routes
+$route["dashboard"]="AdminController/dashboard";
+$route["orderDetails"]="AdminController/orderDetails";
+$route["deleteOrder"]="OrdersController/deleteOrder";
+
+//user routes
+$route["userDetails"]="AdminController/userDetails";
+$route["cardPaymentDetails"]="AdminController/cardPaymentDetails";
+$route["customerAddressDetails"]="AdminController/customerAddressDetails";
+$route["deleteUser"]="UserController/deleteUser";
+
+
+$route["packageDetails"] = "AdminController/packageDetails";
+$route["partnerDetails"] = "AdminController/partnerDetails";
+$route["reportDetails"] = "AdminController/reportDetails";
+$route["sampleCollecters"] = "AdminController/sampleCollecters";
+$route["servicesDetails"] = "AdminController/servicesDetails";
+$route["userEnquiryDetails"] = "AdminController/userEnquiryDetails";
+
+
+// sample collector form
+$route['sampleCollectorForm'] = 'AdminController/sampleCollectorForm';
+
+//file upload
+
+$route['uploadExcel'] = 'OrdersController/uploadExcelFile';
+$route['fileToUpload'] = 'ExcelController/fileToUpload';
+
+// sample collector
+
+$route['saveSampleCollector'] = 'AdminController/saveSampleCollector';
+$route['deleteSampleRecord'] = 'AdminController/deleteSampleRecord';
+$route['getSampleCollector'] = 'AdminController/getSampleCollector';
+$route['sampleCollector'] = 'OrdersController/sampleCollector';
+$route['getSampleData'] = 'OrdersController/getSampleData';
+$route['SampleCollectorDetails'] = 'OrdersController/SampleCollectorDetails';
+
+// Card Route
+
+$route["previousPayment"] = "CardController/previousPayment";
+$route["addCardForm"] = "CardController/addCardForm";
+$route["addCardDetails"] = "CardController/addCardDetails";
+
+//order Allocation route
+$route["orderAllocation"] = "AdminController/orderAllocation";
+$route["getOrdersTimeSlots"] = "AdminController/getOrdersTimeSlots";
+$route["getOrdersForAllocation"] = "AdminController/getOrdersForAllocation";
+$route["SetOrderAllocationToSampleCollector"] = "AdminController/SetOrderAllocationToSampleCollector";
+$route["cancelOrderAllocation"] = "AdminController/cancelOrderAllocation";
+
+//heramb route
+$route['testForm'] = 'AdminController/testForm';
+$route['getScheduleData'] = 'AdminController/getScheduleData';
+// $route['testForm'] = 'OrdersController/testForm';
+$route['saveFormData'] = 'AdminController/saveFormData';
+$route['saveOtp'] = 'AdminController/saveOtp';
+
+// ----
+$route['sampleCollectersOrders'] = 'OrdersController/sampleCollectersOrders';
+$route['getsampleCollectorsOrder'] = 'OrdersController/getsampleCollectorsOrder';
+
+$route['verifyOtp'] = 'OrdersController/verifyOtp';
+$route['forgetPasswordLink/([a-z]+)'] = 'UserController/forgetPasswordLink/$1';
+$route['fileUploadNotification'] = 'AdminController/fileUploadNotification';
+
+$route['timeslot'] = 'AdminController/timeslot';
+$route['getSampleCollectorDropdown'] = 'AdminController/getSampleCollectorDropdown';
+
+// payment geteway
+$route["create-checkout-session/(:any)/(:any)"]="PaymentController/paymentGetaway/$1/$2";
+$route["onsuccess"]="PaymentController/onsuccess";
+$route["oncancel"]="PaymentController/oncancel";
+
+
+$route["cancelOrder"]="OrdersController/cancelOrder";
+
+//$route["BookingProcess"]="OrdersController/patientdetails";
 $route["orderSummary"]="OrdersController/orderSummary";
 $route["addCart"]="OrdersController/addCart";
 $route["connectUs"]="EnquiryController/connectUs";
 
 $route["BookingProcess"]="OrdersController/BookingProcess";
 $route["orderSummary"]="OrdersController/orderSummary";
+
 
 
