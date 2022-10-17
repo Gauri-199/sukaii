@@ -86,7 +86,7 @@ class EnquiryController extends CI_Controller
 
 	public function connectUs()
 	{
-		$this->load->view('contactus/connectUs');
+		$this->load->view('contactus/contact');
 	}
 
 
