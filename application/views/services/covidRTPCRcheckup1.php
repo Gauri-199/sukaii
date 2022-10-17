@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/index.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -30,25 +30,25 @@
 </head> -->
 
 <body>
-	<?php $this->load->view("layout/header"); ?>
+    <?php include_once('./header.php') ?>
 
     <div class="row mx-0">
         <div class="col-4 d-none d-md-block">
             <div class="d-flex align-items-center">
-                <img src="<?php echo base_url(); ?>assets/images/SCAH.png" alt="">
+                <img src="./images/SCAH.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative" style="left: -19px; z-index: -1;">Sample Collection at home</div>
             </div>
             <div class="d-flex align-items-center">
-                <img src="<?php echo base_url(); ?>assets/images/SSHM.png" alt="">
+                <img src="./images/SSHM.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative" style="left: -19px; z-index: -1;">Strict safety & Hygiene measures</div>
             </div>
             <div class="d-flex align-items-center">
-                <img src="<?php echo base_url(); ?>assets/images/Report.png" alt="">
+                <img src="./images/Report.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative" style="left: -19px; z-index: -1;">Reports within
                     24 - 48 hours</div>
             </div>
             <div class="d-flex align-items-center">
-                <img src="<?php echo base_url(); ?>assets/images/Laboretry.png" alt="">
+                <img src="./images/Laboretry.png" alt="">
                 <div class="w-100 border rounded bg-secondary text-white font-weight-bold py-3 pl-4 pr-2 position-relative" style="left: -19px; z-index: -1;">xxxxx laboratory approved</div>
             </div>
         </div>
@@ -56,7 +56,7 @@
             <div class="d-none d-md-block">
                 <div class="row mx-0 border align-items-center" style='background:#C0ECED;'>
                     <div class="col-3">
-                        <img src="<?php echo base_url(); ?>assets/images/Covid-white.png" class='w-100' alt="" />
+                        <img src="./images/Covid-white.png" class='w-100' alt="" />
 
                     </div>
                     <div class="col-6">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-3 d-flex flex-column justify-content-end">
                         <Button class='text-dark btn btn-block'><b class="priceCode">THB 6500</b></Button>
-                        <a href="<?php echo base_url('serviceOrder/1481'); ?>" style=" text-decoration: none;">
+                        <a href="../sukkaii/BookingProcess.html" style=" text-decoration: none;">
                             <Button class='text-white btn mt-2 btn-block' style='background:#00B3B7;'><b>Book
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </b></Button>
@@ -78,12 +78,12 @@
                         <h4 style="font-weight:500" class="rubicFont nameHeading">COVID RT- PCR TEST</h4>
                     </div>
                     <div class="col-6">
-                        <img src="<?php echo base_url(); ?>assets/images/Covid-white.png" class='w-100' alt="" />
+                        <img src="./images/Covid-white.png" class='w-100' alt="" />
                     </div>
 
                     <div class="col-6 d-flex flex-column justify-content-end">
                         <Button class='text-dark btn btn-block'><b class="priceCode">THB 6500</b></Button>
-                        <a href="<?php echo base_url(); ?>assets/BookingProcess.html" style=" text-decoration: none;">
+                        <a href="../sukkaii/BookingProcess.html" style=" text-decoration: none;">
                             <Button class='text-white btn mt-2 btn-block' style='background:#00B3B7;'><b>Book
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </b></Button>
@@ -122,7 +122,7 @@
     </div>
 
 
-    <!-- <?php include_once('<?php echo base_url(); ?>assets/footer.html') ?> -->
+    <!-- <?php include_once('./footer.html') ?> -->
 </body>
 
 </html>
