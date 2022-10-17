@@ -50,8 +50,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
+
+$route["covidRTPCRcheckup"]="OrdersController/covidRTPCRcheckup";
+$route["basicHeathjCheckup"]="OrdersController/basicHeathjCheckup";
+$route["completeHealthCheckup"]="OrdersController/completeHealthCheckup";
+$route["lenLenCheckUp"]="OrdersController/lenLenCheckUp";
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 
 // Login and registration
 
@@ -204,3 +212,14 @@ $route["oncancel"]="PaymentController/oncancel";
 
 
 $route["cancelOrder"]="OrdersController/cancelOrder";
+
+//$route["BookingProcess"]="OrdersController/patientdetails";
+$route["orderSummary"]="OrdersController/orderSummary";
+$route["addCart"]="OrdersController/addCart";
+$route["connectUs"]="EnquiryController/connectUs";
+
+$route["BookingProcess"]="OrdersController/BookingProcess";
+$route["orderSummary"]="OrdersController/orderSummary";
+
+
+

@@ -56,7 +56,7 @@
                                 Services
                             </a>
                             <div class="dropdown-menu" aria-labelledby="desktopServicemenu">
-                                <a class="dropdown-item" href="./covidRTPCRcheckup.php">Covid RT-PCR Test</a>
+                                <a class="dropdown-item" href="../services/covidRTPCRcheckup.php">Covid RT-PCR Test</a>
                                 <a class="dropdown-item" href="./basicHeathjCheckup.php">Basic Health Check up</a>
                                 <a class="dropdown-item" href="./completeHealthCheckup.php">Complete Health Check up</a>
                                 <a class="dropdown-item" href="./lenLenCheckUp.php">Len- Len Test</a>
@@ -96,7 +96,7 @@
                                 Dropright
                             </button>
                             <div class="dropdown-menu" aria-labelledby="mobilemenuService">
-                            <a class="dropdown-item" href="./covidRTPCRcheckup.php">Covid RT-PCR Test</a>
+                            <a class="dropdown-item" href="../services/covidRTPCRcheckup.php">Covid RT-PCR Test</a>
                                 <a class="dropdown-item" href="./basicHeathjCheckup.php">Basic Health Check up</a>
                                 <a class="dropdown-item" href="./completeHealthCheckup.php">Complete Health Check up</a>
                                 <a class="dropdown-item" href="./lenLenCheckUp.php">Len- Len Test</a>
