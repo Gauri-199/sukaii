@@ -23,6 +23,7 @@
 
 <body>
 <?php $this->load->view('layout/header');?>
+
 <div class="container-fluid loginBgImage">
 	<div class="row">
 		<div class="col-md-5 py-4 mx-auto">
@@ -30,6 +31,7 @@
 				<div class="login_register w-75 mx-auto">
 					<h5 class="mb-4 mt-5 text-center rubicFont">LOGIN / REGISTER</h5>
 					<input type="hidden" id="redirectTo" value="<?= isset($redirectTo) ? $redirectTo : '' ?>" />
+
 					<form method="post" id="loginForm">
 						<div class="user_name mb-3">
 							<h6 class="mb-0">EMAIL</h6>
