@@ -33,8 +33,12 @@ public function patientdetails()
 		$this->load->view('package/lenLenCheckUp');
 	}
 
-	public function BookingProcess(){
-		$this->load->view('order/BookingProcess');
+	public function BookingProcess()
+	{
+	    $query1 = $this->db->query('select * from serveices where status=1')->result();
+	    $data['services'] = $query1;
+	    //print_r($data['services']);die;
+		$this->load->view('order/BookingProcess',$data);
 	}
 	public function  orderSummary(){
 		$this->load->view('order/orderSummary');

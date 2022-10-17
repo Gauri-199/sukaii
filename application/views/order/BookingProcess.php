@@ -114,6 +114,7 @@
 
             </div>
             <!-- patient address  -->
+			<form id="formServiceOrder" method="post" novalidate="novalidate">
             <div class="bg-white mt-2 rounded d-flex align-items-center" id="patientAddredd" style="cursor:pointer;">
                 <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
                 <h6 class="mb-0 ml-2 rubicFont">Add Sample collection address</h6>
@@ -287,6 +288,7 @@
 
                 </div>
             </div>
+			</form>
 
         </div>
         <div class="col-12 col-md-7">
@@ -347,6 +349,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="row mx-0 mt-5 px-2 latoFont">
                 <!-- <h1 class='text-center col-12 mb-4 PackageHeadings'><b>Packages</b></h1> -->
                 <div class="col-12 col-md-4 px-1">
