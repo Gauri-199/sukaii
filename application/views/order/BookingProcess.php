@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/index.css">
     <link rel="stylesheet" href="">
+    <!-- box icons link  -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -26,7 +27,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-     -->
+     <!-- animate css link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+     />
      <style>
         .list {
             background: #efefef;
@@ -72,12 +75,13 @@
 
 </head>
 
-<body>
 <?php $this->load->view("layout/header"); ?>
+
+<body>
     <div class="row" style="background-color:#F7F7F7">
         <div class="col-12">
             <div class="d-flex  align-items-center py-3">
-                <a href="./covidRTPCRcheckup.html   ">
+                <a href="<?php echo base_url(); ?>assets/covidRTPCRcheckup.html   ">
                     <span class="mr-3 " style="font-size: x-large; color: #00B3B7;"><i
                         class="fa-solid fa-left-long"></i></span>
                 </a>
@@ -90,7 +94,7 @@
                 <p class="border-right btn mb-0 text-secondary">+66</p>
                 <input type="number" pattern="[789][0-9]{9}" placeholder="XXXXX XXXXX" name="PatientNumber"
                     id="PatientNumber" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
-                <img src='<?=base_url()?>assets/images/Check.png' style="width: 20px;" class="mr-2" alt="checkedIcon" />
+                <img src='<?php echo base_url(); ?>assets/images/Check.png' style="width: 20px;" class="mr-2" alt="checkedIcon" />
             </div>
             <!-- patoent details  -->
             <div class="bg-white rounded d-flex align-items-center" id="AddPatient" style="cursor:pointer;">
@@ -335,7 +339,7 @@
                         </tbody>
                     </table>
                     <div class="text-center">
-                        <a href="<?=base_url('orderSummary')?>">
+                        <a href="<?php echo base_url('orderSummary'); ?>">
                             <button type="button"
                             style="background: radial-gradient(50% 50% at 50% 50%, #B3B1B2 0%, #5F5F5F 100%)"
                             class="btn text-white font-weight-bold"> Checkout</button>
@@ -482,7 +486,7 @@
                                     </div>
                                    
                                         <div class="price  text-center text-white" style="width: 65%; border-radius:0px 8px 8px 0px;">
-                                            <a href="./lenLenCheckUp.html" style="color:white !important;">
+                                            <a href="<?php echo base_url(); ?>assets/lenLenCheckUp.html" style="color:white !important;">
                                             <span class='small'>EXCLUSIVE OFFER</span>
                                             <h6>THB 2000</h6>
                                         </a>
@@ -500,7 +504,6 @@
         </div>
 
     </div>
-    <?php $this->load->view("./layout/footer"); ?>
 </body>
 <script>
     $("#show_2nd_week").click(function() {
