@@ -22,7 +22,7 @@
     <header id="" class='bg-white'>
         <div class="align-items-center border-bottom row">
             <div class="align-items-center col col-md-3 col-sm-6 d-flex">
-                <a href="./index.php" class=""> <img src="./SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
+                <a href="./index.php" class=""> <img src="<?php echo base_url()?>assets/SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
                 <a href="#AllServicePackages"><button type="button" id="BookingBtn" class="badge-pill border-white btn btn-sm font-weight-bold mt-4 px-3 text-white d-none d-md-block themeBlueBg latoFont" style="font-size: 13px;">Book Now</button></a>
 
             </div>
@@ -153,7 +153,7 @@
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <script src="./js/index.js"></script>
+    <script src="<?php base_url()?>assets/js/index.js"></script>
     <!-- <script src="./bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script>
         $("#MenuIconBtn").click(function() {
