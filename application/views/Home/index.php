@@ -1,4 +1,5 @@
 <?php $this->load->view("./layout/header"); ?>
+
 <div class="header_desktop_carousel  row mb-3">
 	<div class="col-md-12 px-0">
 		<div id="mobile_carousel" class="carousel slide" data-ride="carousel">
