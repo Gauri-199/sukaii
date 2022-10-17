@@ -22,6 +22,7 @@
     
     </head>
 <body class="bodyColor">
+<?php $this->load->view("/layout/header"); ?>
     <div class="row">
         <div class="col-12 col-md-6 ">
             <div class="d-flex  align-items-center py-3">
@@ -47,7 +48,7 @@
                 </tbody>
               </table>
         </div>
-        <div class="col-12 col-md-6 " style="background: #C0ECED;
+        <div class="col-12 col-md-6  my-3" style="background: #C0ECED;
         box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.25);">
             <div class="card bg-transparent border-0">
                 <div class="card-header pb-0 bg-transparent" >
@@ -97,7 +98,7 @@
             </div>
         </div>
     </div>
-    
+    <?php $this->load->view("./layout/footer"); ?>
 </body>
 <script>
     // $("#CreditCard").click(function(){

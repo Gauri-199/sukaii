@@ -1,150 +1,278 @@
-<?php $this->load->view("./layout/header"); ?>
+<?php $this->load->view("layout/header"); ?>
 
-<div class="header_desktop_carousel  row mb-3">
-	<div class="col-md-12 px-0">
-		<div id="mobile_carousel" class="carousel slide" data-ride="carousel">
+    <!-- header banner  -->
+    <div class="" style='background:lightgray;'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="<?=base_url()?>assets/images/bodyBannerImage.png" class='w-100' alt="" />
+                </div>
+                <div class="align-items-center col-md-7 d-flex justify-content-around">
+                    <div class="" style='line-height:106px;'>
+                        <h1 class='bannerHeading mb-3 rubicFont'>Your Health, In Your Hands</h1>
+                        <div class="row justify-content-around">
+                            <div class="col-md-10">
+                                <ul class='list-unstyled text-start BannerList'>
+                                    <li><img src='<?=base_url()?>assets/images/Check.png' style="width: 30px;" alt="checkedIcon" /> <b>Easy
+                                            online booking</b></li>
+                                    <li> <img src='<?=base_url()?>assets/images/Check.png' style="width: 30px;" alt="checkedIcon" />
+                                        <b>Sample collection at home</b>
+                                    </li>
+                                    <li> <img src='<?=base_url()?>assets/images/Check.png' style="width: 30px;" alt="checkedIcon" />
+                                        <b>Accurate results within 24-48 hours</b>
+                                    </li>
+                                </ul>
+                                <ul class='list-unstyled'>
+                                    <li class='d-flex justify-content-around'>
+                                        <img src="<?=base_url()?>assets/images/appstore.jpg" class="rounded"
+                                            style='width:100px; height:auto;' alt="" />
+                                        <img src="<?=base_url()?>assets/images/playStore.jpeg" class="rounded"
+                                            style='width:100px; height:auto;' alt="" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100 carousel_image" src="<?= base_url('assets/mimages/banner-1.jpg') ?>" alt="First slide">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100 carousel_image" src="<?= base_url('assets/mimages/banner-2.jpg') ?>" alt="Second slide">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100 carousel_image" src="<?= base_url('assets/mimages/banner-3.jpg') ?>" alt="Third slide">
-				</div>
-			</div>
-			<a class="carousel-control-prev" href="#mobile_carousel" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#mobile_carousel" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-	</div>
+    <!-- Book in 3 simple steps  -->
 
-</div>
-<div class="container-fluid d-md-flex d-sm-block mb-3">
-	<div class="col-md-5 col-sm-12 m-auto thb300_fpr_laptop">
-		<div class="mb-4 mb-lg-3 row w-100 m-auto thb300">
-			<img src="<?= base_url('assets/mimages/{A416F097-35CC-4863-BEA1-AADFA17B3F09}.png.jpg') ?>" class="w-100 px-0" alt="">
-		</div>
+    <div class="row mx-0 mt-4">
+        <h2 class='text-center col-12 mb-5 rubicFont bookingSteps'><b>How to Book in 3 simple steps</b></h2>
+        <div class="col-12 col-md-4 px-4 ">
+            <div class='boxShadow card' style="background-color: #f1f5f5;">
+                <div class='BookingProcess rounded-circle card-header' style="background:#00B3B7">
+                    <div class="text-white latoFont">1</div>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="blockquote mb-0 text-center">
+                        <img src="<?=base_url()?>assets/images/step1.png" class='w-75' alt="" />
+                        <h5 style="height: 40px;" class="latoFont">Select desired service</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 px-4 simplestepcardArrage  ">
+            <div class='boxShadow card' style="background-color: #f1f5f5;">
+                <div class='BookingProcess rounded-circle card-header' style="background:#00B3B7">
+                    <div class="text-white latoFont">2</div>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="blockquote mb-0 text-center">
+                        <img src="<?=base_url()?>assets/images/step2.png" class='w-75' alt="" />
+                        <h5 style="height: 40px;" class="latoFont">Select date, time, and address</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 px-4 simplestepcardArrage ">
+            <div class='boxShadow card' style="background-color: #f1f5f5;">
+                <div class='BookingProcess rounded-circle card-header' style="background:#00B3B7">
+                    <div class="text-white latoFont">3</div>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="blockquote mb-0 text-center">
+                        <img src="<?=base_url()?>assets/images/step3.png" class='w-75' alt="" />
+                        <h5 style="height: 40px;" class="latoFont">Sample collection & Test results</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	</div>
-</div>
-<div id="bookIn3Step"></div>
 
-<div class="modal fade" id="pwusuccess" tabindex="-1" role="dialog" aria-labelledby="pwusuccess" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="m-auto modal-content w-75" style="background-color: var(--themeGreen);">
-			<div class="modal-body">
-				<h5 class="font-weight-bold text-center sukaii_pink_color" style="font-family: var(--primaryText);">
-					Thank You for grtting in touch</h5>
-				<p class="text-center text-light" style="font-family: var(--secondryText);">We will be back to you
-					shortly.</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- @include('components.mob_footer') -->
-<div class="row" id="WeMadeItsImple">
-	<div class="bn3step_img_parent col-12 px-0">
-		<img src="<?= base_url('assets/sukaii_icons/Book-Now-Banner.png') ?>" class="w-100 bn3step_img" alt="">
-	</div>
-</div>
+    <!-- Packages  -->
 
-<!-- servises for mobile  -->
-<div class="container-fluid px-1 mt-5 d-md-none" id="mobileServices">
-	<div class=" row">
-		<div class="border-dark border-right col-6 px-2 text-center">
-			<img src="<?= base_url('assets/sukaii_icons/Covid.png') ?>" style="width: 75%;" class=" mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">COVID RT-PCR TEST</h6>
-		</div>
-		<div class="border-dark border-left col-6 px-2 text-center">
-			<img src="<?= base_url('assets/sukaii_icons/BASIC-HEALTH-CHECK-UP.png') ?>" style="width: 75%;" class="mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">BASIC HEALTH CHECK</h6>
-		</div>
-	</div>
-	<div class="row border-bottom border-dark">
-		<div class="col-6 pt-2 text-center border-right border-dark">
-			<a href="<?= base_url('covid_pcr') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-		<div class="col-6 pt-2 text-center border-left border-dark">
-			<a href="<?= base_url('basic_health_test') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-	</div>
-	<div class=" border-top border-dark row">
-		<div class="border-dark border-right col-6 px-2 text-center pt-3">
-			<img src="<?= base_url('assets/sukaii_icons/COMPLETE-HEALTH-CHECK-UP.png') ?>" style="width: 75%;" class="mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">COMPLETE HEALTH CHECK</h6>
-		</div>
-		<div class="border-dark border-left col-6 px-2 text-center pt-3">
-			<img src="<?= base_url('assets/sukaii_icons/LEN-LEN-TEST.png') ?>" style="width: 75%;" class=" mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">LEN-LEN TEST</h6>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-6 pt-2 text-center border-right border-dark">
-			<a href="<?= base_url('complete_health_test') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-		<div class="col-6 pt-2 text-center border-left border-dark">
-			<a href="<?= base_url('len_len_test') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-	</div>
-</div>
-<!-- servises for desktop  -->
+    <div class="row mx-0 mt-5 px-2 PackageBg latoFont" id="AllServicePackages">
+        <h1 class='text-center col-12 mb-4 PackageHeadings rubicFont'><b>Packages</b></h1>
+        <div class="col-12 col-md-3">
+            <div class='boxShadow card py-3 '>
+                <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                    <p style='font-weight:600; font-size: 1.1rem; height: 50px;' class="rubicFont mb-2">Covid RT-PCR
+                        Test</p>
+                </div>
+                <div class="card-body pt-1">
+                    <h6 style="visibility:hidden">Includes: 40+ Parameters</h6>
+                    <div class="blockquote mb-0 text-center" style='height:120px'>
+                        <ul class='text-left mb-3 pl-2'>
+                            <li>The most accurate and reliable test for Covid-19</li>
+                            <li>Nasal and oral swabs</li>
+                            <li>Report suitable for travel or official purposes</li>
+                        </ul>
+                    </div>
+                    <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+                        <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+                    </button>
+                    <div class='border-0 mt-3'>
+                        <div class="OfferPrice">
+                            <div class="offer text-center" style="width: 35%;">
+                                <span class='small'>UPTO</span>
+                                <h6>50% OFF</h6>
+                            </div>
 
-<div class="container-fluid px-1 mb-5 mt-5 d-none d-md-block" id="desktopServices">
-	<div class=" row">
-		<div class="border-dark border-right col-md-3 col-6 px-2 text-center">
-			<img src="<?= base_url('assets/sukaii_icons/Covid.png') ?>" style="width: 75%;" class=" mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">COVID RT-PCR TEST</h6>
-		</div>
-		<div class="border-dark border-right col-md-3 col-6 px-2 text-center">
-			<img src="<?= base_url('assets/sukaii_icons/BASIC-HEALTH-CHECK-UP.png') ?>" style="width: 75%;" class="mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">BASIC HEALTH CHECK</h6>
-		</div>
-		<div class="border-dark border-right col-md-3 col-6 px-2 text-center ">
-			<img src="<?= base_url('assets/sukaii_icons/COMPLETE-HEALTH-CHECK-UP.png') ?>" style="width: 75%;" class="mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">COMPLETE HEALTH CHECK</h6>
-		</div>
-		<div class=" col-md-3 col-6 px-2 text-center">
-			<img src="<?= base_url('assets/sukaii_icons/LEN-LEN-TEST.png') ?>" style="width: 75%;" class=" mb-3 services_images" alt="">
-			<h6 class="font-weight-bold small text-center">LEN-LEN TEST</h6>
-		</div>
-	</div>
-	<div class="row ">
-		<div class="col-6 col-md-3 pt-2 text-center border-right border-dark">
-			<a href="<?= base_url('covid_pcr') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-		<div class="col-6 col-md-3 pt-2 text-center border-right border-dark">
-			<a href="<?= base_url('basic_health_test') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-		<div class="col-6 col-md-3 pt-2 text-center border-right border-dark">
-			<a href="<?= base_url('complete_health_test') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-		<div class="col-6 col-md-3 pt-2 text-center ">
-			<a href="<?= base_url('len_len_test') ?>">
-				<button type="button" class="btn btn-sm font-weight-bold px-3 sukaii_pink_bgcolor text-center text-light mb-3">BOOK</button>
-			</a>
-		</div>
-	</div>
-</div>
+                            <div class="price  text-center text-white"
+                                style="width: 65%; border-radius:0px 8px 8px 0px;">
+                                <a href="./covidRTPCRcheckup.php"
+                                    style="color:white !important; text-decoration: none;">
+                                    <span class='small'>EXCLUSIVE OFFER</span>
+                                    <h6>THB 2000</h6>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="col-12 col-md-3 packagesCard">
+            <div class='boxShadow card py-3 '>
+                <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                    <p style='font-weight:600; font-size: 1rem; height: 50px;' class="rubicFont mb-2">Basic Health Check
+                        up</p>
+                </div>
+                <div class="card-body pt-1">
+                    <h6 class="font-weight-bold small">Includes: 40+ Parameters</h6>
+                    <div class="blockquote mb-0 text-center" style='height:120px'>
+                        <ul class='text-left mb-3 pl-2'>
+                            <li>Comprehensive blood check for most common parameters
+                            </li>
+                            <li>Advised for all adults
+                            </li>
+                            <li>Perfect for regular tracking of health
+                            </li>
+                        </ul>
+                    </div>
+                    <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+                        <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+                    </button>
+                    <div class='border-0 mt-3'>
+                        <div class="OfferPrice">
+                            <div class="offer text-center" style="width: 35%;">
+                                <span class='small'>UPTO</span>
+                                <h6>50% OFF</h6>
+                            </div>
+
+                            <div class="price  text-center text-white"
+                                style="width: 65%; border-radius:0px 8px 8px 0px;">
+                                <a href="./basicHeathjCheckup.php"
+                                    style="color:white !important; text-decoration: none;">
+                                    <span class='small'>EXCLUSIVE OFFER</span>
+                                    <h6>THB 2000</h6>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3  -->
+        <div class="col-12 col-md-3 packagesCard">
+            <div class='boxShadow card py-3 '>
+                <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                    <p style='font-weight:600; font-size: 1rem; height: 50px;' class="rubicFont mb-2">Complete Health
+                        Check up</p>
+                </div>
+                <div class="card-body pt-1">
+                    <h6 class="font-weight-bold small">Includes: 40+ Parameters</h6>
+                    <div class="blockquote mb-0 text-center" style='height:120px'>
+                        <ul class='text-left mb-3 pl-2'>
+                            <li>Comprehensive blood check for most common parameters
+                            </li>
+                            <li>Advised for all seniors
+                            </li>
+                            <li>Screens for common cancer markers
+                            </li>
+                            <!-- <li>Urine analysis</li> -->
+                        </ul>
+                    </div>
+                    <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+                        <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+                    </button>
+                    <div class='border-0 mt-3'>
+                        <div class="OfferPrice">
+                            <div class="offer text-center" style="width: 35%;">
+                                <span class='small'>UPTO</span>
+                                <h6>50% OFF</h6>
+                            </div>
+
+                            <div class="price  text-center text-white"
+                                style="width: 65%; border-radius:0px 8px 8px 0px;">
+                                <a href="./completeHealthCheckup.php"
+                                    style="color:white !important; text-decoration: none;">
+                                    <span class='small'>EXCLUSIVE OFFER</span>
+                                    <h6>THB 2000</h6>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="col-12 col-md-3  packagesCard">
+            <div class='boxShadow card py-3 '>
+                <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                    <p style='font-weight:600; font-size: 1rem; height: 50px;' class="rubicFont mb-2">Len- Len Test</p>
+                </div>
+                <div class="card-body pt-1">
+                    <h6 class="font-weight-bold small">Includes: 6+ Parameters</h6>
+                    <div class="blockquote mb-0 text-center" style='height:120px'>
+                        <ul class='text-left mb-3 pl-2'>
+                            <li>Test for common STDs
+                            </li>
+                            <li>Quick and discrete
+                            </li>
+                        </ul>
+                    </div>
+                    <button class='badge-pill bg-transparent border-info btn btn-sm text-info'>
+                        <p class='mb-0 ms-1'><span class="mr-1"><i class="fa-solid fa-plus"></i></span> View more</p>
+                    </button>
+                    <div class='border-0 mt-3'>
+                        <div class="OfferPrice">
+                            <div class="offer text-center" style="width: 35%;">
+                                <span class='small'>UPTO</span>
+                                <h6>50% OFF</h6>
+                            </div>
+
+                            <div class="price  text-center text-white"
+                                style="width: 65%; border-radius:0px 8px 8px 0px;">
+                                <a href="./lenLenCheckUp.php" style="color:white !important; text-decoration: none;">
+                                    <span class='small'>EXCLUSIVE OFFER</span>
+                                    <h6>THB 2000</h6>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- whyUs  -->
+
+    <div class="row mx-0 whyUsBg align-items-center pt-5 latoFont">
+        <h1 class='text-center col-12 mb-4 Y_usHeadings d-block d-md-none rubicFont'><b>Why Us</b></h1>
+        <div class="col-12 col-md-6 ">
+            <img src="<?=base_url()?>assets/images/whyus.png" class='w-100' alt="" />
+        </div>
+        <div class="col-12 col-md-6 text-center">
+            <h1 class='text-center d-none d-md-block   Y_usHeadings rubicFont'><b>Why Us</b></h1>
+            <h5 class='ml-3 mt-4 text-left'>We believe..</h5>
+            <ul class='text-left'>
+                <li>High quality health care should be available at your home where possible</li>
+                <li>Booking healthcare services should be fast, simple, and convenient</li>
+                <li>Your health reports should make sense and allow you to track your progress</li>
+            </ul>
+            <h5 class='text-center'>AND most of all, we believe that:</h4>
+                <h3 class="rubicFont">Your Health, In Your Hands</h3>
+        </div>
+    </div>
 <?php $this->load->view("./layout/footer"); ?>

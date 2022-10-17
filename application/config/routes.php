@@ -52,3 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route["BookingProcess"]="OrdersController/patientdetails";
+$route["orderSummary"]="OrdersController/orderSummary";
+$route["addCart"]="OrdersController/addCart";
+$route["connectUs"]="EnquiryController/connectUs";
+
+
