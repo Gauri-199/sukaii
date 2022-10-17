@@ -60,7 +60,7 @@
                             </ul>
                         </div>
                         <div class="">
-                            <p class="text-center">Don't have an account? <a href="./register.php"><b class="registerNow">Register NOW !</b></a></p>
+                            <p class="text-center">Don't have an account? <a href="../LoginReg/register.php"><b class="registerNow">Register NOW !</b></a></p>
                         </div>
                     </div>
                 </div>

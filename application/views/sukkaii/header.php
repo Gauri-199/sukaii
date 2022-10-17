@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukaii</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/style.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/index.css">
     <link rel="stylesheet" href="">
     <!-- box icons link  -->
 
@@ -22,7 +22,7 @@
     <header id="" class='bg-white'>
         <div class="align-items-center border-bottom row">
             <div class="align-items-center col col-md-3 col-sm-6 d-flex">
-                <a href="./index.php" class=""> <img src="./SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
+                <a href="./index.php" class=""> <img src="<?=base_url()?>assets/SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
                 <a href="#AllServicePackages"><button type="button" id="BookingBtn" class="badge-pill border-white btn btn-sm font-weight-bold mt-4 px-3 text-white d-none d-md-block themeBlueBg latoFont" style="font-size: 13px;">Book Now</button></a>
 
             </div>
@@ -56,7 +56,7 @@
                                 Services
                             </a>
                             <div class="dropdown-menu" aria-labelledby="desktopServicemenu">
-                                <a class="dropdown-item" href="./covidRTPCRcheckup.php">Covid RT-PCR Test</a>
+                                <a class="dropdown-item" href="../services/covidRTPCRcheckup.php">Covid RT-PCR Test</a>
                                 <a class="dropdown-item" href="./basicHeathjCheckup.php">Basic Health Check up</a>
                                 <a class="dropdown-item" href="./completeHealthCheckup.php">Complete Health Check up</a>
                                 <a class="dropdown-item" href="./lenLenCheckUp.php">Len- Len Test</a>
@@ -96,7 +96,7 @@
                                 Dropright
                             </button>
                             <div class="dropdown-menu" aria-labelledby="mobilemenuService">
-                            <a class="dropdown-item" href="./covidRTPCRcheckup.php">Covid RT-PCR Test</a>
+                            <a class="dropdown-item" href="../services/covidRTPCRcheckup.php">Covid RT-PCR Test</a>
                                 <a class="dropdown-item" href="./basicHeathjCheckup.php">Basic Health Check up</a>
                                 <a class="dropdown-item" href="./completeHealthCheckup.php">Complete Health Check up</a>
                                 <a class="dropdown-item" href="./lenLenCheckUp.php">Len- Len Test</a>
@@ -153,7 +153,7 @@
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <script src="./js/index.js"></script>
+    <script src="<?=base_url()?>assets/js/index.js"></script>
     <!-- <script src="./bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script>
         $("#MenuIconBtn").click(function() {
