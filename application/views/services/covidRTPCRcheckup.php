@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-3 d-flex flex-column justify-content-end">
                         <Button class='text-dark btn btn-block'><b class="priceCode">THB 6500</b></Button>
-                        <a href="./BookingProcess.html" style=" text-decoration: none;">
+                        <a href="../sukkaii/BookingProcess.html" style=" text-decoration: none;">
                             <Button class='text-white btn mt-2 btn-block' style='background:#00B3B7;'><b>Book
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </b></Button>
@@ -83,7 +83,7 @@
 
                     <div class="col-6 d-flex flex-column justify-content-end">
                         <Button class='text-dark btn btn-block'><b class="priceCode">THB 6500</b></Button>
-                        <a href="./BookingProcess.html" style=" text-decoration: none;">
+                        <a href="../sukkaii/BookingProcess.html" style=" text-decoration: none;">
                             <Button class='text-white btn mt-2 btn-block' style='background:#00B3B7;'><b>Book
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </b></Button>

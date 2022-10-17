@@ -173,7 +173,7 @@
 
                             <div class="price  text-center text-white"
                                 style="width: 65%; border-radius:0px 8px 8px 0px;">
-                                <a href="./covidRTPCRcheckup.php"
+                                <a href="../services/covidRTPCRcheckup.php"
                                     style="color:white !important; text-decoration: none;">
                                     <span class='small'>EXCLUSIVE OFFER</span>
                                     <h6>THB 2000</h6>
