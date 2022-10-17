@@ -8,10 +8,10 @@ public function patientdetails()
 		$this->load->view('order/BookingProcess');
 	}
 
-	public function orderSummary()
-	{
-		$this->load->view('order/orderSummary');
-	}
+//	public function orderSummary()
+//	{
+//		$this->load->view('order/orderSummary');
+//	}
 	public function addCart()
 	{
 		$this->load->view('order/addCart');
@@ -27,11 +27,20 @@ public function patientdetails()
 		$this->load->view('package/basicHeathjCheckup');
 	}
 	public function completeHealthCheckup(){
-		$this->load->view('package/basicHeathjCheckup');
+		$this->load->view('package/completeHealthCheckup');
 	}
 	public function lenLenCheckUp(){
 		$this->load->view('package/lenLenCheckUp');
 	}
+
+	public function BookingProcess(){
+		$this->load->view('order/BookingProcess');
+	}
+	public function  orderSummary(){
+		$this->load->view('order/orderSummary');
+	}
+
+
 }
 ?>
 
