@@ -24,11 +24,7 @@
     <header id="" class='bg-white'>
         <div class="align-items-center border-bottom row">
             <div class="align-items-center col col-md-3 col-sm-6 d-flex">
-<<<<<<< HEAD
                 <a href="./index.php" class=""> <img src="<?=base_url()?>assets/SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
-=======
-                <a href="./index.php" class=""> <img src="<?php echo base_url()?>assets/SUKAII Icons/SUKAII-Logo.png" alt="Sukaii" style="max-width:155px;" class="logo_mobile p-2 w-100"></a>
->>>>>>> c0619f983b3bc98acc4789ca0d3cf70f71019f66
                 <a href="#AllServicePackages"><button type="button" id="BookingBtn" class="badge-pill border-white btn btn-sm font-weight-bold mt-4 px-3 text-white d-none d-md-block themeBlueBg latoFont" style="font-size: 13px;">Book Now</button></a>
 
             </div>
