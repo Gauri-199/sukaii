@@ -7,10 +7,10 @@
         <title>Sukaii</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="./bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/index.css">
         <link rel="stylesheet" href="">
         <!-- box icons link  -->
     
@@ -21,12 +21,12 @@
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
     </head>
+	<?php $this->load->view("layout/header"); ?>
 <body class="bodyColor">
-<?php $this->load->view("/layout/header"); ?>
     <div class="row">
         <div class="col-12 col-md-6 ">
             <div class="d-flex  align-items-center py-3">
-                <a href="./BookingProcess.html">    <span class="mr-3 " style="font-size: x-large; color: #00B3B7;"><i
+                <a href="<?php echo base_url(); ?>assets/BookingProcess.html">    <span class="mr-3 " style="font-size: x-large; color: #00B3B7;"><i
                     class="fa-solid fa-left-long"></i></span></a>
                 <h5 class="rubicFont mb-0">Order Summary</h5>
             </div>
@@ -48,7 +48,7 @@
                 </tbody>
               </table>
         </div>
-        <div class="col-12 col-md-6  my-3" style="background: #C0ECED;
+        <div class="col-12 col-md-6 " style="background: #C0ECED;
         box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.25);">
             <div class="card bg-transparent border-0">
                 <div class="card-header pb-0 bg-transparent" >
@@ -98,7 +98,6 @@
             </div>
         </div>
     </div>
-    <?php $this->load->view("./layout/footer"); ?>
 </body>
 <script>
     // $("#CreditCard").click(function(){
