@@ -1,0 +1,297 @@
+/* lato font family  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* rubic family */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --latoFont: 'Lato', sans-serif;
+  --rubicFont:'Rubik', sans-serif;
+  --themeBlue:#00B3B7;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* width */
+::-webkit-scrollbar {
+
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #919191; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #919191;  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #919191; 
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--themeBlue);
+}
+
+ .latoFont{
+  font-family: var(--latoFont)
+} 
+.rubicFont{
+  font-family: var(--rubicFont)
+}
+.themeBlueBg{
+  background-color: var(--themeBlue);
+}
+.themeBlueTextColor{
+  color: var(--themeBlue);
+}
+.bodyColor{
+  background-color: #F5F5F5;
+}
+tbody tr{
+  border: transparent !important;
+}
+label{
+  margin-bottom: 0% !important;
+  padding-left: .5rem;
+}
+.form-group{
+  margin-bottom: .5rem;
+}
+.fw500{
+  font-weight: 500;
+}
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
+}
+
+a:hover{
+    text-decoration: none;
+    font-weight: 500;
+    color: #282c34;
+}
+a{
+  text-decoration: none;
+  font-weight: 500;
+  color: #282c34;
+}
+
+.pageSeperateMenus a, .langLocationMenu a {
+    margin: auto .75rem;
+}
+.bannerHeading,.priceCode,.ConfirmedHeading, .registerNow, .login{
+    background: radial-gradient(#E9128F, #980159);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.offerCardorPrice{
+    border: 2px solid #E9128F;
+    text-align: center;
+
+}
+.loginUsingapis img{
+    width: 30%;
+}
+.loginUsingapis li{
+  text-align: center;
+}
+
+.btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
+  background:none;
+}
+.offerCardorPrice .Price, .AddmemberBtn{
+    background: radial-gradient(#E9128F, #980159);
+}
+.register,.packageAddedTocart{
+  background: -webkit-linear-gradient(#E9128F 0%, #980159 100%);
+
+}
+.SimpleBookingHeading,.packageAmmount,.nameHeading,.aboutUsHeading,.PackegeHeading, .AboutUsHeading{
+    background: linear-gradient(180deg, #00B3B7 20%, #005B5E 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.simpleBookikgStepCount{
+    background: linear-gradient(180deg, #00B3B7 0%, #005B5E 100%);
+    color: white;
+    font-size: 21px;
+   
+}
+.signInBtn{
+  background: linear-gradient(180deg, #00B3B7 0%, #005B5E 100%);
+}
+.BannerList li, .aboutUsListing li{
+    line-height: 40px;
+    font-family: var(--latoFont);
+}
+.aboutUsListing li::marker{
+color: #00B3B7
+}
+.FooterComponent, .detalsBtn{
+    background: #00b3b7;
+}
+
+.bannerHeading > ul > li img{
+    width: 30px !important;
+}
+.boxShadow{
+    box-shadow: 1px 1px 6px 2px #bbb4b4;
+  }
+  .hide_menu ul li{
+    font-family: var(--latoFont);
+  }
+  
+  #menu a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #282c34;
+  }
+  #menu a:hover{
+    color: rgb(0, 179, 183);
+  }
+  .BnnerHeading{
+    font-size: 40px;
+    background: -webkit-linear-gradient(#E9128F 0%, #980159 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .GradientBg{
+    background-image: linear-gradient(360deg, #00000038, transparent);
+  }
+  .BookingProcess{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: -37px;
+    left: 40%;
+    font-weight: bold;
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+    background: linear-gradient(180deg, #00B3B7 0%, #005B5E 100%) !important;
+  }
+  .bookingSteps, .PackageHeadings, .Y_usHeadings{
+    background: linear-gradient(180deg, #00B3B7 0%, #005B5E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .OfferPrice{
+    border-radius: 8px;
+    border: 1px solid #E9128F;
+    display: flex;
+  }
+  .OfferPrice .price{
+    background: radial-gradient(50% 50% at 50% 50%, #E9128F 0%, #980159 100%);
+  }
+  .blockquote ul li{
+    font-size: small;
+  }
+  .PackageBg{
+    background: linear-gradient(360deg, #C0ECED -7.21%, rgba(192, 236, 237, 0) 106.77%);
+  }
+  .whyUsBg{
+    background: linear-gradient(180deg, #C9EFF0 0%, rgba(217, 217, 217, 0) 100%);
+  }
+  .packDiscribe{
+    background: linear-gradient(180deg,white  0%, lightgray 100%);
+  }
+  .whyUsBg li, h4 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .whyUsBg li::marker {
+    color: #00B3B7;
+  }
+  footer ul{
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  footer ul li{
+    font-weight: 400;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.05rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.connectUs{
+  background-image: url(../images/ConnectUsBg.png);
+}
+.loginBgImage,.registrationBgImage {
+  background-image: url(../images/loginBgImage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: unset;
+}
+.ablutusdetails{
+  width: 75%;
+  line-height: 1.4;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .bannerHeading, .bookingSteps{
+        font-size: 1.75rem;
+        margin-top: 1rem;
+    }
+    .simplestepcardArrage{
+        margin-top: 3rem;
+        padding-top: .5rem;
+    }
+    .OfferPrice .offer{
+        width: 50% !important;
+    }
+    .logo_mobile{
+        width: 75% !important;
+    }
+    .packagesCard{
+        margin-top: 1.5rem !important;
+    }
+    .PackageHeader p{
+      height: auto !important;
+    }
+    .hiddenParameter{
+      display: none !important;
+    }
+    .ablutusdetails{
+      width: 100% !important;
+      text-align: justify;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    
+    }
+  }
+  @media only screen and (max-width: 330px) {
+    .dicrimentBtn, .IncrimentBtn{
+      width: 15px !important;
+      height: 15px !important;
+      font-size: x-small;
+    }
+  }

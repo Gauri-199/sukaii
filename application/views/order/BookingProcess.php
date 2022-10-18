@@ -34,7 +34,7 @@
         }
 
         .list input {
-            accent-color: #ea088b;
+            color: #ea088b;
         }
 
         .list label {
