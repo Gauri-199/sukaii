@@ -85,32 +85,32 @@
                 <h5 class="rubicFont mb-0">Patient Details</h5>
             </div>
         </div>
-        <form id="formServiceOrder" method="post" novalidate="novalidate">
-        <div class="col-12 col-md-5 latoFont">
-            <!-- patient number  -->
-            <div class="bg-white d-flex align-items-center mb-2 py-2 rounded">
-                <p class="border-right btn mb-0 text-secondary">+66</p>
-                <input type="number" pattern="[789][0-9]{9}" placeholder="XXXXX XXXXX" name="PatientNumber" id="PatientNumber" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
-                <img src='<?php echo base_url(); ?>assets/images/Check.png' style="width: 20px;" class="mr-2" alt="checkedIcon" />
-            </div>
-            <!-- patoent details  -->
-            <div class="bg-white rounded d-flex align-items-center" id="AddPatient" style="cursor:pointer;">
-                <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
-                <h6 class="mb-0 ml-2 rubicFont">Add Patients</h6>
-            </div>
-            <div class="AddPatientDetails bg-white px-3 pt-2" style="display: none;" id="patientDetails">
-                <div class="d-flex align-items-center">
-                    <span><i class="fa-solid text-danger fa-circle-xmark"></i></span>
-                    <input type="text" placeholder="Name" name="PatientName" id="PatientName" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
-                    <button type="button" class="btn btn-sm">Age</button>
-                    <button type="button" class="btn ml-1 btn-sm">Gender</button>
+        <form id="formServiceOrder" method="post" novalidate="novalidate" class="w-100">
+            <div class="col-12 col-md-5 latoFont">
+                <!-- patient number  -->
+                <div class="bg-white d-flex align-items-center mb-2 py-2 rounded">
+                    <p class="border-right btn mb-0 text-secondary">+66</p>
+                    <input type="number" pattern="[789][0-9]{9}" placeholder="XXXXX XXXXX" name="PatientNumber" id="PatientNumber" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
+                    <img src='<?php echo base_url(); ?>assets/images/Check.png' style="width: 20px;" class="mr-2" alt="checkedIcon" />
                 </div>
-                <button type="button" class="btn my-3 btn-sm AddmemberBtn text-white">Add Member</button>
+                <!-- patoent details  -->
+                <div class="bg-white rounded d-flex align-items-center" id="AddPatient" style="cursor:pointer;">
+                    <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
+                    <h6 class="mb-0 ml-2 rubicFont">Add Patients</h6>
+                </div>
+                <div class="AddPatientDetails bg-white px-3 pt-2" style="display: none;" id="patientDetails">
+                    <div class="d-flex align-items-center">
+                        <span><i class="fa-solid text-danger fa-circle-xmark"></i></span>
+                        <input type="text" placeholder="Name" name="PatientName" id="PatientName" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
+                        <button type="button" class="btn btn-sm">Age</button>
+                        <button type="button" class="btn ml-1 btn-sm">Gender</button>
+                    </div>
+                    <button type="button" class="btn my-3 btn-sm AddmemberBtn text-white">Add Member</button>
 
 
-            </div>
-            <!-- patient address  -->
-            
+                </div>
+                <!-- patient address  -->
+
                 <div class="bg-white mt-2 rounded d-flex align-items-center" id="patientAddredd" style="cursor:pointer;">
                     <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
                     <h6 class="mb-0 ml-2 rubicFont">Add Sample collection address</h6>
@@ -125,6 +125,18 @@
                         <input type="number" placeholder="Zip Code" name="PatientAddressCode" id="PatientAddressCode" style="width:30%;" class="form-control  py-1 mx-2 rounded">
                         <button type="button" class="btn my-3 px-3 btn-sm AddmemberBtn text-white">Save</button>
                     </div>
+                    <a href="<?= base_url('create_address') ?>" style="text-decoration:none;">
+                        <div class="container pt-3 pb-2" style="border-bottom: 2px solid gray;">
+                            
+                                <div class="align-items-center  d-flex justify-content-between small" style="font-family: var(--primaryText);">
+                                    <div class="test_name d-flex">
+                                        <span><i class=" text-dark fa-solid fa-plus pr-1 sub_sub_heading "></i></span>
+                                        <h6 class="font-weight-bold mb-0 sub_sub_heading text-dark">Add another address</h6>
+                                    </div>
+                                </div>
+                       
+                        </div>
+                    </a>
                 </div>
                 <!-- patinetr ppointment date  -->
 
@@ -281,161 +293,161 @@
 
                     </div>
                 </div>
-            </form>
+        </form>
 
-        </div>
-        <div class="col-12 col-md-7">
-            <div class="p-3 latoFont" style="background: #C0ECED; box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.25);">
-                <div class="border-bottom border-secondary">
-                    <h5 class="rubicFont">Cart</h5>
-                </div>
-                <div class="d-flex flex-column h-75 justify-content-between selectedPackage">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <th scope="row" class="pl-0">Len Len Test</th>
-                                <td colspan="2" class="px-0">
-                                    <button type="button" class=" dicrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-minus fa-solid"></i></span> </button>
-                                    <div type="button" style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" class="btn px-md-3 btn-sm mr-1"><b>1</b> </div>
-                                    <button type="button" class="IncrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-solid fa-plus"></i></span> </button>
-                                </td>
-                                <td class="px-0">THB 3500</td>
-                            </tr>
+    </div>
+    <div class="col-12 col-md-7">
+        <div class="p-3 latoFont" style="background: #C0ECED; box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.25);">
+            <div class="border-bottom border-secondary">
+                <h5 class="rubicFont">Cart</h5>
+            </div>
+            <div class="d-flex flex-column h-75 justify-content-between selectedPackage">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="pl-0">Len Len Test</th>
+                            <td colspan="2" class="px-0">
+                                <button type="button" class=" dicrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-minus fa-solid"></i></span> </button>
+                                <div type="button" style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" class="btn px-md-3 btn-sm mr-1"><b>1</b> </div>
+                                <button type="button" class="IncrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-solid fa-plus"></i></span> </button>
+                            </td>
+                            <td class="px-0">THB 3500</td>
+                        </tr>
 
-                            <tr style="visibility:hidden ;">
-                                <th scope="row">Basic </th>
-                                <td colspan="2">
-                                    <button type="button" class="btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-minus fa-solid"></i></span> </button>
-                                    <div type="button" style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" class="btn px-3 btn-sm mr-1"><b>1</b> </div>
-                                    <!-- <button type="button"
+                        <tr style="visibility:hidden ;">
+                            <th scope="row">Basic </th>
+                            <td colspan="2">
+                                <button type="button" class="btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-minus fa-solid"></i></span> </button>
+                                <div type="button" style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" class="btn px-3 btn-sm mr-1"><b>1</b> </div>
+                                <!-- <button type="button"
                                         class="btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
                                         style="width: 20px; height: 20px;"><span
                                             class="align-items-center d-flex justify-content-center"><i
                                                 class="fa-solid fa-plus"></i></span> </button> -->
-                                </td>
-                                <td>THB 3500</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="text-center">
-                        <a href="<?php echo base_url('orderSummary'); ?>">
-                            <button type="button" style="background: radial-gradient(50% 50% at 50% 50%, #B3B1B2 0%, #5F5F5F 100%)" class="btn text-white font-weight-bold"> Checkout</button>
-                        </a>
+                            </td>
+                            <td>THB 3500</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="<?php echo base_url('orderSummary'); ?>">
+                        <button type="button" style="background: radial-gradient(50% 50% at 50% 50%, #B3B1B2 0%, #5F5F5F 100%)" class="btn text-white font-weight-bold"> Checkout</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mx-0 mt-5 px-2 latoFont">
+            <!-- <h1 class='text-center col-12 mb-4 PackageHeadings'><b>Packages</b></h1> -->
+            <div class="col-12 col-md-4 px-1">
+                <div class='boxShadow card py-3 '>
+                    <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                        <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Covid RT-PCR Test</p>
+                    </div>
+                    <div class="card-body pt-1">
+                        <h6 style="visibility:hidden" class="hiddenParameter">Includes: 40+ Parameters</h6>
+                        <div class="blockquote mb-0 text-center">
+                            <ul class='text-left mb-3 pl-2'>
+                                <li>The most accurate and reliable test for Covid-19</li>
+                                <li>Nasal and oral swabs</li>
+                                <li>Report suitable for travel or official purposes</li>
+                            </ul>
+                        </div>
+
+                        <div class='border-0 mt-3'>
+                            <div class="suggestionOfferPrice d-flex justify-content-between align-items-center">
+                                <div class="offer text-center">
+                                    <h6 class="small mb-0">50% OFF</h6>
+                                </div>
+
+                                <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
+
+                                    <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
+                            Cart</button>
                     </div>
                 </div>
             </div>
-
-
-            <div class="row mx-0 mt-5 px-2 latoFont">
-                <!-- <h1 class='text-center col-12 mb-4 PackageHeadings'><b>Packages</b></h1> -->
-                <div class="col-12 col-md-4 px-1">
-                    <div class='boxShadow card py-3 '>
-                        <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
-                            <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Covid RT-PCR Test</p>
+            <!-- 2 -->
+            <div class="col-12 col-md-4 px-1 packagesCard">
+                <div class='boxShadow card py-3 '>
+                    <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                        <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Basic Health Check up</p>
+                    </div>
+                    <div class="card-body pt-1">
+                        <h6 class="font-weight-bold small">Includes: 40+ Parameters</h6>
+                        <div class="blockquote mb-0 text-center">
+                            <ul class='text-left mb-3 pl-2'>
+                                <li>Comprehensive blood check for most common parameters
+                                </li>
+                                <li>Advised for all adults
+                                </li>
+                                <li>Perfect for regular tracking of health
+                                </li>
+                            </ul>
                         </div>
-                        <div class="card-body pt-1">
-                            <h6 style="visibility:hidden" class="hiddenParameter">Includes: 40+ Parameters</h6>
-                            <div class="blockquote mb-0 text-center">
-                                <ul class='text-left mb-3 pl-2'>
-                                    <li>The most accurate and reliable test for Covid-19</li>
-                                    <li>Nasal and oral swabs</li>
-                                    <li>Report suitable for travel or official purposes</li>
-                                </ul>
-                            </div>
-
-                            <div class='border-0 mt-3'>
-                                <div class="suggestionOfferPrice d-flex justify-content-between align-items-center">
-                                    <div class="offer text-center">
-                                        <h6 class="small mb-0">50% OFF</h6>
-                                    </div>
-
-                                    <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
-
-                                        <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
-                                    </div>
-
+                        <div class='border-0 mt-3'>
+                            <div class="suggestionOfferPrice d-flex justify-content-between align-items-center">
+                                <div class="offer text-center">
+                                    <h6 class="small mb-0">50% OFF</h6>
                                 </div>
+
+                                <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
+
+                                    <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
+                                </div>
+
                             </div>
-                            <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
-                                Cart</button>
                         </div>
+                        <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
+                            Cart</button>
                     </div>
                 </div>
-                <!-- 2 -->
-                <div class="col-12 col-md-4 px-1 packagesCard">
-                    <div class='boxShadow card py-3 '>
-                        <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
-                            <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Basic Health Check up</p>
+            </div>
+            <!-- 3  -->
+            <div class="col-12 col-md-4 px-1 packagesCard">
+                <div class='boxShadow card py-3 '>
+                    <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
+                        <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Complete Health Check up</p>
+                    </div>
+                    <div class="card-body pt-1">
+                        <h6 class="font-weight-bold small">Includes: 40+ Parameters</h6>
+                        <div class="blockquote mb-0 text-center">
+                            <ul class='text-left mb-3 pl-2'>
+                                <li>Comprehensive blood check for most common parameters
+                                </li>
+                                <li>Advised for all seniors
+                                </li>
+                                <li>Screens for common cancer markers
+                                </li>
+                                <!-- <li>Urine analysis</li> -->
+                            </ul>
                         </div>
-                        <div class="card-body pt-1">
-                            <h6 class="font-weight-bold small">Includes: 40+ Parameters</h6>
-                            <div class="blockquote mb-0 text-center">
-                                <ul class='text-left mb-3 pl-2'>
-                                    <li>Comprehensive blood check for most common parameters
-                                    </li>
-                                    <li>Advised for all adults
-                                    </li>
-                                    <li>Perfect for regular tracking of health
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class='border-0 mt-3'>
-                                <div class="suggestionOfferPrice d-flex justify-content-between align-items-center">
-                                    <div class="offer text-center">
-                                        <h6 class="small mb-0">50% OFF</h6>
-                                    </div>
-
-                                    <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
-
-                                        <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
-                                    </div>
-
+                        <div class='border-0 mt-3'>
+                            <div class="suggestionOfferPrice d-flex justify-content-between align-items-center">
+                                <div class="offer text-center">
+                                    <h6 class="small mb-0">50% OFF</h6>
                                 </div>
+
+                                <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
+
+                                    <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
+                                </div>
+
                             </div>
-                            <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
-                                Cart</button>
                         </div>
+                        <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
+                            Cart</button>
                     </div>
                 </div>
-                <!-- 3  -->
-                <div class="col-12 col-md-4 px-1 packagesCard">
-                    <div class='boxShadow card py-3 '>
-                        <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
-                            <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Complete Health Check up</p>
-                        </div>
-                        <div class="card-body pt-1">
-                            <h6 class="font-weight-bold small">Includes: 40+ Parameters</h6>
-                            <div class="blockquote mb-0 text-center">
-                                <ul class='text-left mb-3 pl-2'>
-                                    <li>Comprehensive blood check for most common parameters
-                                    </li>
-                                    <li>Advised for all seniors
-                                    </li>
-                                    <li>Screens for common cancer markers
-                                    </li>
-                                    <!-- <li>Urine analysis</li> -->
-                                </ul>
-                            </div>
-                            <div class='border-0 mt-3'>
-                                <div class="suggestionOfferPrice d-flex justify-content-between align-items-center">
-                                    <div class="offer text-center">
-                                        <h6 class="small mb-0">50% OFF</h6>
-                                    </div>
-
-                                    <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
-
-                                        <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
-                                Cart</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- 4 -->
-                <!-- <div class="col-12 col-md-3  packagesCard">
+            </div>
+            <!-- 4 -->
+            <!-- <div class="col-12 col-md-3  packagesCard">
                     <div class='boxShadow card py-3 '>
                         <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
                             <p style='font-weight:600; font-size: 1rem;'>Len- Len Test</p>
@@ -473,11 +485,11 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
-
-
-
         </div>
+
+
+
+    </div>
 
     </div>
     <?php $this->load->view("layout/footer"); ?>
