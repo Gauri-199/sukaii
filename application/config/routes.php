@@ -218,7 +218,7 @@ $route["orderSummary"]="OrdersController/orderSummary";
 $route["addCart"]="OrdersController/addCart";
 $route["connectUs"]="EnquiryController/connectUs";
 
-$route["BookingProcess"]="OrdersController/BookingProcess";
+$route["BookingProcess/(:num)"]="OrdersController/BookingProcess/$1";
 $route["orderSummary"]="OrdersController/orderSummary";
 
 

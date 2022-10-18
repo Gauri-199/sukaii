@@ -297,25 +297,58 @@
                 <div class="d-flex flex-column h-75 justify-content-between selectedPackage">
                     <table class="table">
                         <tbody>
+						<?php
+						$alreadyInCartService = array();
+						if (!empty($this->session->cart_session) > 0) {
+						$orderServices = $this->session->cart_session;
+						$tempOrderService = array();
+						foreach ($orderServices as $row) {
+							$tempOrderService[$row->service_id][] = $row;
+						}
+						foreach ($tempOrderService as $orderSummaryRow1) {
+						$count = count($orderSummaryRow1);
+						if ($count == 0) {
+							continue;
+						}
+						$orderSummaryRow = $orderSummaryRow1[0];
+						array_push($alreadyInCartService,$orderSummaryRow->service_name);
+
+						?>
                             <tr>
-                                <th scope="row" class="pl-0">Len Len Test</th>
+                                <th scope="row" class="pl-0"><?= $orderSummaryRow->service_name; ?></th>
                                 <td colspan="2" class="px-0">
                                     <button type="button"
                                         class=" dicrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
-                                        style="width: 20px; height: 20px;"><span
+                                        style="width: 20px; height: 20px;"><!--<span
                                             class="align-items-center d-flex justify-content-center"><i
-                                                class="fa-minus fa-solid"></i></span> </button>
+                                                class="fa-minus fa-solid"></i></span>-->
+										<span class="" onclick='removeItemIntoCart(<?= $orderSummaryRow->service_id; ?>)'><b> <i
+														class="fa-minus fa-solid"></i> </b></span>
+									</button>
                                     <div type="button"
                                         style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"
-                                        class="btn px-md-3 btn-sm mr-1"><b>1</b> </div>
+                                        class="btn px-md-3 btn-sm mr-1"><b>
+											<span class="px-2"><b> <small><?= $count; ?></b></span> </div>
                                     <button type="button"
                                         class="IncrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
-                                        style="width: 20px; height: 20px;"><span
-                                            class="align-items-center d-flex justify-content-center"><i
-                                                class="fa-solid fa-plus"></i></span> </button>
+                                        style="width: 20px; height: 20px;">
+										<!--<span class="align-items-center d-flex justify-content-center"><i
+                                                class="fa-solid fa-plus"></i></span>-->
+										<span onclick='addItemIntoCart(<?= $orderSummaryRow->service_id; ?>,"<?= $orderSummaryRow->service_name; ?>","-",<?= $orderSummaryRow->service_price; ?>,<?= $orderSummaryRow->service_discount; ?>,<?= $orderSummaryRow->service_sale_price; ?>)'><b> + </b></span>
+
+									</button>
                                 </td>
-                                <td class="px-0">THB 3500</td>
+                                <td class="px-0">THB <?= $orderSummaryRow->service_sale_price; ?></td>
                             </tr>
+
+
+						<?php }
+						}
+						//$services = $serviceData->data;
+						//$isExistServiceCount = count($alreadyInCartService);
+
+						?>
+
                             
                             <tr style="visibility:hidden ;">
                                 <th scope="row">Basic </th>
@@ -338,6 +371,7 @@
                             </tr>
                         </tbody>
                     </table>
+
                     <div class="text-center">
                         <a href="<?php echo base_url('orderSummary'); ?>">
                             <button type="button"
@@ -351,13 +385,32 @@
 
             <div class="row mx-0 mt-5 px-2 latoFont">
                 <!-- <h1 class='text-center col-12 mb-4 PackageHeadings'><b>Packages</b></h1> -->
+
+             <?php $services = $serviceData->data;
+			 $isExistServiceCount = count($alreadyInCartService);
+			 if (count($services) != $isExistServiceCount){
+
+ 			 ?>
+				 <?php
+
+				 foreach ($services as $serviceRow) {
+					 if($isExistServiceCount>0){
+						 $isExist = array_filter($alreadyInCartService,function ($item) use($serviceRow){
+							 return $item === $serviceRow->service_name;
+						 });
+
+						 if(count($isExist)>0){
+							 continue;
+						 }
+					 }
+					 ?>
                 <div class="col-12 col-md-4 px-1">
+
                     <div class='boxShadow card py-3 '>
                         <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
-                            <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Covid RT-PCR Test</p>
+                            <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont"><?= $serviceRow->service_name; ?></p>
                         </div>
                         <div class="card-body pt-1">
-                            <h6 style="visibility:hidden" class="hiddenParameter">Includes: 40+ Parameters</h6>
                             <div class="blockquote mb-0 text-center">
                                 <ul class='text-left mb-3 pl-2'>
                                     <li>The most accurate and reliable test for Covid-19</li>
@@ -375,18 +428,25 @@
                                     <div class="pacakgesuggestionPrice  text-center "
                                         style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
 
-                                        <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
+                                        <h6 style="font-weight:600;" class="mb-0 rubicFont">THB <?= $serviceRow->service_rate; ?></h6>
                                     </div>
 
                                 </div>
                             </div>
-                            <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent'> Add to
+                            <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent' attr-sId="<?= $serviceRow->id; ?>" attr-service_name="<?= $serviceRow->service_name; ?>"
+									attr-service_id="<?= $serviceRow->service_id; ?>"
+									attr-service_rate="<?= $serviceRow->service_rate; ?>"
+									attr-discount="<?= $serviceRow->discount; ?>"
+									attr-sale_price="<?= $serviceRow->sale_price; ?>"
+									onclick='addItemIntoCart(<?= $serviceRow->id; ?>,"<?= $serviceRow->service_name; ?>","<?= $serviceRow->service_id; ?>",<?= $serviceRow->service_rate; ?>,<?= $serviceRow->discount; ?>,<?= $serviceRow->sale_price; ?>)'> Add to
                                 Cart</button>
                         </div>
                     </div>
                 </div>
+					<?php } }?>
+
                 <!-- 2 -->
-                <div class="col-12 col-md-4 px-1 packagesCard">
+                <!--<div class="col-12 col-md-4 px-1 packagesCard">
                     <div class='boxShadow card py-3 '>
                         <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
                             <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Basic Health Check up</p>
@@ -421,9 +481,9 @@
                                 Cart</button>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- 3  -->
-                <div class="col-12 col-md-4 px-1 packagesCard">
+                <!--<div class="col-12 col-md-4 px-1 packagesCard">
                     <div class='boxShadow card py-3 '>
                         <div class='PackageHeader card-header bg-transparent border-0 pb-0'>
                             <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont">Complete Health Check up</p>
@@ -438,7 +498,7 @@
                                     </li>
                                     <li>Screens for common cancer markers
                                     </li>
-                                    <!-- <li>Urine analysis</li> -->
+
                                 </ul>
                             </div>
                             <div class='border-0 mt-3'>
@@ -459,7 +519,7 @@
                                 Cart</button>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- 4 -->
                 <!-- <div class="col-12 col-md-3  packagesCard">
                     <div class='boxShadow card py-3 '>
@@ -507,6 +567,7 @@
 
     </div>
 </body>
+<?php $this->load->view('layout/footer'); ?>
 <script>
     $("#show_2nd_week").click(function() {
         $(".hidden_days").removeClass('animate__animated animate__bounceOutLeft');
@@ -554,5 +615,45 @@
         $("#patientAddreddDetails").slideToggle();
     });
     // patientAddredd
+</script>
+
+
+<script>
+	function addItemIntoCart(hdnSId, hdnServiceName, hdnServiceId, hdnServiceRate, hdnServiceDiscount, hdnServiceSalePrice) {
+		let formData = new FormData();
+		formData.set("SId", hdnSId)
+		formData.set("ServiceName", hdnServiceName)
+		formData.set("ServiceId", hdnServiceId)
+		formData.set("ServiceRate", hdnServiceRate)
+		formData.set("ServiceDiscount", hdnServiceDiscount)
+		formData.set("ServiceSalePrice", hdnServiceSalePrice)
+		app.request("updateCart", formData).then(response => {
+			if (response.status === 200) {
+                 console.log(response.body);
+				   window.location.href = baseURL + 'serviceOrder/'+hdnSId;
+				//window.location.href = baseURL + 'viewCart';
+			} else {
+				app.errorToast(response.status);
+			}
+		}).catch(error => {
+			console.log(error);
+		})
+	}
+
+	function removeItemIntoCart(hdnSId) {
+		let formData = new FormData();
+		formData.set("serviceID", hdnSId)
+		app.request("removeCartItem", formData).then(response => {
+			console.log(response);
+			if (response.status === 200) {
+				window.location.href = baseURL + 'serviceOrder/'+hdnSId;
+				//window.location.href = baseURL + 'viewCart';
+			} else {
+				app.errorToast(response.status);
+			}
+		}).catch(error => {
+			console.log(error);
+		})
+	}
 </script>
 </html>
