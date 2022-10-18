@@ -1,4 +1,3 @@
-<?php //print_r($this->session->page_session);die;?>
 <!DOCTYPE html>
 <html lang="en">
 
