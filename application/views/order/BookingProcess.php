@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +34,7 @@
         }
 
         .list input {
-            accent-color: #ea088b;
+            color: #ea088b;
         }
 
         .list label {
@@ -546,4 +545,3 @@
 </script>
 
 </html>
-
