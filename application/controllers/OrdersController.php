@@ -43,6 +43,29 @@ class OrdersController extends CI_Controller
 			$data["service_rate"] = $actual_price;
 			$data["service_discount"] = $discount_price;
 			$data["service_sale"] = $sale_price;
+
+           /*$myOrder = array('service_id' => $service_id,
+			'service_name' => $service_name,
+			'service_price' => $actual_price,
+			'service_discount' => $discount_price,
+			'service_sale_price' => $sale_price,
+			'count' => 1);*/
+
+			$myOrder = new stdClass();
+			$myOrder->service_id = $service_id;
+			$myOrder->service_name = $service_name;
+			$myOrder->service_price = $actual_price;
+			$myOrder->service_discount = $discount_price;
+			$myOrder->service_sale_price = $sale_price;
+			$myOrder->count = 1;
+			$cartSession = $this->session->cart_session;
+
+			if (count($cartSession)==0) {
+			//if (empty($cartSession)) {
+				array_push($cartSession, $myOrder);
+			}
+			$this->session->cart_session = $cartSession;
+
 		}
 
 		if ($rescheduleData !=''){
@@ -75,11 +98,10 @@ class OrdersController extends CI_Controller
 		}
 		$serviceQuery = 'SELECT * FROM serveices where id >=1481';
 
-		$resultObject = $this->MasterModel->_select("customer_address", $where);
+		$resultObject1 = $this->MasterModel->_select("customer_address", $where);
 		$serviceData = $this->MasterModel->_rawQuery($serviceQuery);
 		$data['serviceData'] = $serviceData;
-		$data['userAddress'] = $resultObject;
-		//print_r($data['serviceData']);die;
+		$data['userAddress'] = $resultObject1;
 
 		$this->load->view('order/serviceOrder', $data);
 	}
@@ -1165,13 +1187,22 @@ class OrdersController extends CI_Controller
 		$ServiceDiscount = $this->input->post('ServiceDiscount');
 		$ServiceSalePrice = $this->input->post('ServiceSalePrice');
 		$arrOrderItems = $this->session->cart_session;
-		//print_r($arrOrderItems);die;
+        $countArr = array();
+		/*foreach($arrOrderItems as $val)
+		{
+			if($val->service_id ==$SId){
+				$val->count = $val->count++;
+				array_push($countArr,$val);
+			}
+		}*/
+		//print_r($arrOrderItems);
 		$cartObjectToCopy = (array)$arrOrderItems[0];
 		$cartObjectToCopy['service_id'] = $SId;
 		$cartObjectToCopy['service_name'] = $ServiceName;
 		$cartObjectToCopy['service_price'] = $ServiceRate;
 		$cartObjectToCopy['service_discount'] = $ServiceDiscount;
 		$cartObjectToCopy['service_sale_price'] = $ServiceSalePrice;
+		$cartObjectToCopy['count'] = count($countArr);
 		array_push($arrOrderItems, (object)$cartObjectToCopy);
 		$this->session->cart_session = $arrOrderItems;
 		$response["status"] = 200;
@@ -1182,9 +1213,11 @@ class OrdersController extends CI_Controller
 
 	public function removeCartItem()
 	{
+
 		$service_id = $this->input->post("serviceID");
 
 		$OrderItems = $this->session->cart_session;
+		//var_dump($OrderItems);
 		$updateOrderItems = array();
 		$count = 0;
 		foreach ($OrderItems as $index => $item) {

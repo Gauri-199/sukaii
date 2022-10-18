@@ -1,3 +1,4 @@
+<?php //print_r($this->session->page_session);die;?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,6 +77,7 @@
 </head>
 
 <?php $this->load->view("layout/header"); ?>
+<?php $t = $this->session->cart_session; ?>
 
 <body>
     <div class="row" style="background-color:#F7F7F7">
@@ -305,12 +307,15 @@
 						$alreadyInCartService = array();
 						if (!empty($this->session->cart_session) > 0) {
 						$orderServices = $this->session->cart_session;
+
 						$tempOrderService = array();
 						foreach ($orderServices as $row) {
+
 							$tempOrderService[$row->service_id][] = $row;
 						}
 						foreach ($tempOrderService as $orderSummaryRow1) {
 						$count = count($orderSummaryRow1);
+
 						if ($count == 0) {
 							continue;
 						}
@@ -332,6 +337,7 @@
                                     <div type="button"
                                         style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"
                                         class="btn px-md-3 btn-sm mr-1"><b>
+											<!--<span class="px-2"><b> <small><?/*= $orderSummaryRow->count; */?></b></span> </div>-->
 											<span class="px-2"><b> <small><?= $count; ?></b></span> </div>
                                     <button type="button"
                                         class="IncrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
@@ -656,6 +662,7 @@
 		app.request("removeCartItem", formData).then(response => {
 			console.log(response);
 			if (response.status === 200) {
+				console.log(response);
 				window.location.href = baseURL + 'serviceOrder/'+hdnSId;
 				//window.location.href = baseURL + 'viewCart';
 			} else {
