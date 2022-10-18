@@ -664,6 +664,7 @@ class OrdersController extends CI_Controller
 		$resultObject = $this->OrderModel->_select("customer_address", $where);
 
 		$this->load->view('order/OrderSummary', array("userAddress" => $resultObject));
+
 	}
 
 	public function viewCart($id = null)
@@ -755,6 +756,7 @@ class OrdersController extends CI_Controller
 	{
 		$this->load->view('order/myBooking');
 	}
+
 
 	public function getMyBookings()
 	{

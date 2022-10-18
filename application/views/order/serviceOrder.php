@@ -114,6 +114,8 @@
 
             </div>
             <!-- patient address  -->
+			<form id="formServiceOrder" method="post" novalidate="novalidate">
+
             <div class="bg-white mt-2 rounded d-flex align-items-center" id="patientAddredd" style="cursor:pointer;">
                 <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
                 <h6 class="mb-0 ml-2 rubicFont">Add Sample collection address</h6>
@@ -287,6 +289,7 @@
 
                 </div>
             </div>
+			</form>
 
         </div>
         <div class="col-12 col-md-7">
@@ -297,6 +300,7 @@
                 <div class="d-flex flex-column h-75 justify-content-between selectedPackage">
                     <table class="table">
                         <tbody>
+
 						<?php
 						$alreadyInCartService = array();
 						if (!empty($this->session->cart_session) > 0) {
@@ -372,6 +376,7 @@
                         </tbody>
                     </table>
 
+
                     <div class="text-center">
                         <a href="<?php echo base_url('orderSummary'); ?>">
                             <button type="button"
@@ -381,6 +386,7 @@
                     </div>
                 </div>
             </div>
+
 
 
             <div class="row mx-0 mt-5 px-2 latoFont">
@@ -411,6 +417,7 @@
                             <p style='font-weight:600; font-size: 1rem;  height: 50px;' class="rubicFont"><?= $serviceRow->service_name; ?></p>
                         </div>
                         <div class="card-body pt-1">
+
                             <div class="blockquote mb-0 text-center">
                                 <ul class='text-left mb-3 pl-2'>
                                     <li>The most accurate and reliable test for Covid-19</li>
@@ -429,10 +436,12 @@
                                         style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
 
                                         <h6 style="font-weight:600;" class="mb-0 rubicFont">THB <?= $serviceRow->service_rate; ?></h6>
+
                                     </div>
 
                                 </div>
                             </div>
+
                             <button class='border-info btn btn-block btn-sm text-dark mt-2 bg-transparent' attr-sId="<?= $serviceRow->id; ?>" attr-service_name="<?= $serviceRow->service_name; ?>"
 									attr-service_id="<?= $serviceRow->service_id; ?>"
 									attr-service_rate="<?= $serviceRow->service_rate; ?>"
@@ -443,6 +452,7 @@
                         </div>
                     </div>
                 </div>
+
 					<?php } }?>
 
                 <!-- 2 -->
@@ -498,7 +508,6 @@
                                     </li>
                                     <li>Screens for common cancer markers
                                     </li>
-
                                 </ul>
                             </div>
                             <div class='border-0 mt-3'>
@@ -567,6 +576,7 @@
 
     </div>
 </body>
+
 <?php $this->load->view('layout/footer'); ?>
 <script>
     $("#show_2nd_week").click(function() {

@@ -9,10 +9,10 @@
             <div class="col-6 col-md-3">
                 <ul>
                     <li class="rubicFont"><b>Pages</b></li>
-                    <a href="./aboutUs.php">
+                    <a href="<?php echo base_url('AboutUs'); ?>">
                         <li>About Us</li>
                     </a>
-                    <a href="./connectUs.php">
+                    <a href="<?php echo base_url(); ?>connectUs">
                         <li>Contact Us</li>
                     </a>
                     <a href="#">
@@ -23,16 +23,16 @@
             <div class="col-6 col-md-3">
                 <ul>
                     <li class="rubicFont"><b>Services</b></li>
-                    <a href="./covidRTPCRcheckup.php">
+                    <a href="<?php echo base_url('covidRTPCRcheckup'); ?>">
                         <li>Covid RT-PCT Test</li>
                     </a>
-                    <a href="./basicHeathjCheckup.php">
+                    <a href="<?php echo base_url('basicHeathjCheckup'); ?>">
                         <li>Basic Health Check up</li>
                     </a>
-                   <a href="./completeHealthCheckup.php">
+                   <a href="<?php echo base_url('completeHealthCheckup'); ?>">
                     <li>Complete Health Check up</li>
                    </a>
-                   <a href="./lenLenCheckUp.php">
+                   <a href="<?php echo base_url('lenLenCheckUp'); ?>">
                     <li>Len-Len tests</li>
                    </a>
                     

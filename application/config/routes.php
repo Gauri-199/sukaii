@@ -60,6 +60,11 @@ $route["lenLenCheckUp"]="OrdersController/lenLenCheckUp";
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+// aboutus 
+
+$route["AboutUs"]="EnquiryController/aboutUs";
+
+
 
 // Login and registration
 
@@ -87,6 +92,7 @@ $route["deleteEnquiry"] = "EnquiryController/deleteEnquiry";
 
 // Orders route
 $route['serviceOrder/(:num)'] = 'OrdersController/serviceOrder/$1';
+
 $route['placeOrder'] = 'OrdersController/placeOrder';
 $route['insertOrder'] = 'OrdersController/insertOrder';
 $route['updateOrderStatus'] = 'OrdersController/updateOrderStatus';
