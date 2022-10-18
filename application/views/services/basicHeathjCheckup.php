@@ -414,8 +414,8 @@
         </div>
     </div>
 
+    <?php $this->load->view("layout/footer"); ?>
 
-    <!-- <?php include_once('<?php echo base_url(); ?>assets/footer.html') ?> -->
     <!-- <div id="footer"></div>  -->
 </body>
 <script>

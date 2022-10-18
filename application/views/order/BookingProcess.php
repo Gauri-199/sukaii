@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukaii</title>
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/index.css">
     <link rel="stylesheet" href="">
-    <!-- box icons link  -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -27,32 +26,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-     <!-- animate css link  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
-     />
-     <style>
+     /> -->
+    <style>
         .list {
             background: #efefef;
         }
-        
+
         .list input {
             accent-color: #ea088b;
         }
-        
+
         .list label {
             color: #ea088b;
         }
-        
+
         .form-control:focus {
             box-shadow: none;
             outline: none;
         }
-        
+
         .patient_details[placeholder] {
             font-size: 12px;
             font-weight: 700;
         }
-        
+
         .schedule_day {
             border: 1px solid #9f9f9f;
             border-radius: 7px;
@@ -62,12 +60,12 @@
             font-size: 14px;
             padding: 4px 0px;
         }
-        
+
         .totalDAys .schedule_day::selection {
             color: red;
             background-color: var(--iconbgColor);
         }
-        
+
         .schudule_time {
             border: 1px solid #9f9f9f;
         }
@@ -82,18 +80,17 @@
         <div class="col-12">
             <div class="d-flex  align-items-center py-3">
                 <a href="<?php echo base_url(); ?>assets/covidRTPCRcheckup.html   ">
-                    <span class="mr-3 " style="font-size: x-large; color: #00B3B7;"><i
-                        class="fa-solid fa-left-long"></i></span>
+                    <span class="mr-3 " style="font-size: x-large; color: #00B3B7;"><i class="fa-solid fa-left-long"></i></span>
                 </a>
                 <h5 class="rubicFont mb-0">Patient Details</h5>
             </div>
         </div>
+        <form id="formServiceOrder" method="post" novalidate="novalidate">
         <div class="col-12 col-md-5 latoFont">
             <!-- patient number  -->
             <div class="bg-white d-flex align-items-center mb-2 py-2 rounded">
                 <p class="border-right btn mb-0 text-secondary">+66</p>
-                <input type="number" pattern="[789][0-9]{9}" placeholder="XXXXX XXXXX" name="PatientNumber"
-                    id="PatientNumber" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
+                <input type="number" pattern="[789][0-9]{9}" placeholder="XXXXX XXXXX" name="PatientNumber" id="PatientNumber" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
                 <img src='<?php echo base_url(); ?>assets/images/Check.png' style="width: 20px;" class="mr-2" alt="checkedIcon" />
             </div>
             <!-- patoent details  -->
@@ -101,11 +98,10 @@
                 <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
                 <h6 class="mb-0 ml-2 rubicFont">Add Patients</h6>
             </div>
-            <div class="AddPatientDetails bg-white px-3 pt-2"  style="display: none;" id="patientDetails" >
+            <div class="AddPatientDetails bg-white px-3 pt-2" style="display: none;" id="patientDetails">
                 <div class="d-flex align-items-center">
                     <span><i class="fa-solid text-danger fa-circle-xmark"></i></span>
-                    <input type="text" placeholder="Name" name="PatientName" id="PatientName"
-                        class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
+                    <input type="text" placeholder="Name" name="PatientName" id="PatientName" class="border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
                     <button type="button" class="btn btn-sm">Age</button>
                     <button type="button" class="btn ml-1 btn-sm">Gender</button>
                 </div>
@@ -114,181 +110,178 @@
 
             </div>
             <!-- patient address  -->
-			<form id="formServiceOrder" method="post" novalidate="novalidate">
-            <div class="bg-white mt-2 rounded d-flex align-items-center" id="patientAddredd" style="cursor:pointer;">
-                <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
-                <h6 class="mb-0 ml-2 rubicFont">Add Sample collection address</h6>
-            </div>
-            <div class="AddPatientDetails bg-white mb-2 px-3" style="display:none" id="patientAddreddDetails">
-                <div class="py-3">
-                    <input type="text" placeholder="line 1" name="PatientAddressLine1" id="PatientAddressLine-1"
-                        class="mb-2 border-left-0 py-1 border-right-0 border-top-0 form-control mx-2 rounded-0">
-                    <input type="text" placeholder="line 2" name="PatientAddressLine2" id="PatientAddressLine-2"
-                        class=" mb-2 py-1 border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
+            
+                <div class="bg-white mt-2 rounded d-flex align-items-center" id="patientAddredd" style="cursor:pointer;">
+                    <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
+                    <h6 class="mb-0 ml-2 rubicFont">Add Sample collection address</h6>
+                </div>
+                <div class="AddPatientDetails bg-white mb-2 px-3" style="display:none" id="patientAddreddDetails">
+                    <div class="py-3">
+                        <input type="text" placeholder="line 1" name="PatientAddressLine1" id="PatientAddressLine-1" class="mb-2 border-left-0 py-1 border-right-0 border-top-0 form-control mx-2 rounded-0">
+                        <input type="text" placeholder="line 2" name="PatientAddressLine2" id="PatientAddressLine-2" class=" mb-2 py-1 border-left-0 border-right-0 border-top-0 form-control mx-2 rounded-0">
 
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <input type="number" placeholder="Zip Code" name="PatientAddressCode" id="PatientAddressCode" style="width:30%;" class="form-control  py-1 mx-2 rounded">
+                        <button type="button" class="btn my-3 px-3 btn-sm AddmemberBtn text-white">Save</button>
+                    </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-between">
-                    <input type="number" placeholder="Zip Code" name="PatientAddressCode" id="PatientAddressCode"
-                       style="width:30%;" class="form-control  py-1 mx-2 rounded">
-                    <button type="button" class="btn my-3 px-3 btn-sm AddmemberBtn text-white">Save</button>
-                </div>
-            </div>
-            <!-- patinetr ppointment date  -->
+                <!-- patinetr ppointment date  -->
 
-            <div class="bg-white rounded mt-2 d-flex align-items-center "  id="pic_schedule_time">
-                <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
-                <h6 class="mb-0 ml-2 rubicFont">Select Date & Time</h6>
-            </div>
-            <div class="Appointment bg-white pt-3" >
-                <div class="totalDAys position-relative"  style="display: none;" id="schedule_date">
-                    <div class="visible_days">
-                        <div class="schedule_day_div d-flex align-items-center">
-                            <div class="font-weight-bold schedule_day text-center" style="background-color: var(--iconbgColor);">
-                                <p class="mb-0 ">TUE</p>
-                                <p class="mb-0">01</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">THU</p>
-                                <p class="mb-0">02</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">FRI</p>
-                                <p class="mb-0">03</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">SAT</p>
-                                <p class="mb-0">04</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">SUN</p>
-                                <p class="mb-0">05</p>
-                            </div>
-                            <div class=" font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">MON</p>
-                                <p class="mb-0">06</p>
-                            </div>
-                            <span><i id="show_2nd_week" class="fa-solid pl-1 fa-caret-right"></i></span>
-                        </div>
-                    </div>
-                    <div class="hidden_days position-absolute" style="display: none; top: 0; right: 0; left: 0;">
-                        <div class="Hidden_schedule_day_div d-flex align-items-center">
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">TUE</p>
-                                <p class="mb-0">07</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">THU</p>
-                                <p class="mb-0">08</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">FRI</p>
-                                <p class="mb-0">09</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">SAT</p>
-                                <p class="mb-0">10</p>
-                            </div>
-                            <div class="font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">SUN</p>
-                                <p class="mb-0">11</p>
-                            </div>
-                            <div class=" font-weight-bold schedule_day text-center">
-                                <p class="mb-0 ">MON</p>
-                                <p class="mb-0">12</p>
-                            </div>
-                            <span><i id="show_1nd_week" class="fa-solid pl-1 fa-caret-right"></i></span>
-                        </div>
-                    </div>
-                    <small class="" style="color: #a9a9a9!important;">Free Cancellation before 2 hrs.</small>
+                <div class="bg-white rounded mt-2 d-flex align-items-center " id="pic_schedule_time">
+                    <p class="border-right btn mb-0 text-secondary" style="visibility:hidden;">+66</p>
+                    <h6 class="mb-0 ml-2 rubicFont">Select Date & Time</h6>
                 </div>
-                <div class="row my-2 schedule_time" style="display: none;">
-                    <div class="col-3 mb-2">
-                        <div class="rounded text-center schudule_time" style="background-color: var(--iconbgColor);">
-                            <small style="font-weight: 500;"> 07.00 AM</small>
+                <div class="Appointment bg-white pt-3">
+                    <div class="totalDAys position-relative" style="display: none;" id="schedule_date">
+                        <div class="visible_days">
+                            <div class="schedule_day_div d-flex align-items-center">
+                                <div class="font-weight-bold schedule_day text-center" style="background-color: var(--iconbgColor);">
+                                    <p class="mb-0 ">TUE</p>
+                                    <p class="mb-0">01</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">THU</p>
+                                    <p class="mb-0">02</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">FRI</p>
+                                    <p class="mb-0">03</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">SAT</p>
+                                    <p class="mb-0">04</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">SUN</p>
+                                    <p class="mb-0">05</p>
+                                </div>
+                                <div class=" font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">MON</p>
+                                    <p class="mb-0">06</p>
+                                </div>
+                                <span><i id="show_2nd_week" class="fa-solid pl-1 fa-caret-right"></i></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 07.30 AM</small>
+                        <div class="hidden_days position-absolute" style="display: none; top: 0; right: 0; left: 0;">
+                            <div class="Hidden_schedule_day_div d-flex align-items-center">
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">TUE</p>
+                                    <p class="mb-0">07</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">THU</p>
+                                    <p class="mb-0">08</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">FRI</p>
+                                    <p class="mb-0">09</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">SAT</p>
+                                    <p class="mb-0">10</p>
+                                </div>
+                                <div class="font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">SUN</p>
+                                    <p class="mb-0">11</p>
+                                </div>
+                                <div class=" font-weight-bold schedule_day text-center">
+                                    <p class="mb-0 ">MON</p>
+                                    <p class="mb-0">12</p>
+                                </div>
+                                <span><i id="show_1nd_week" class="fa-solid pl-1 fa-caret-right"></i></span>
+                            </div>
                         </div>
+                        <small class="" style="color: #a9a9a9!important;">Free Cancellation before 2 hrs.</small>
                     </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 08.00 AM</small>
+                    <div class="row my-2 schedule_time" style="display: none;">
+                        <div class="col-3 mb-2">
+                            <div class="rounded text-center schudule_time" style="background-color: var(--iconbgColor);">
+                                <small style="font-weight: 500;"> 07.00 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 08.30 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 07.30 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 09.00 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 08.00 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">git 
-                            <small style="font-weight: 500;"> 09.30 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 08.30 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 10.00 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 09.00 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 10.30 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">git
+                                <small style="font-weight: 500;"> 09.30 AM</small>
+                            </div>
                         </div>
-                    </div>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 10.00 AM</small>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 10.30 AM</small>
+                            </div>
+                        </div>
 
-                </div>
-                <div class="row my-4  schedule_time" style="display: none;">
-                    <div class="col-3 mb-2">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 01.00 AM</small>
-                        </div>
                     </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 01.30 AM</small>
+                    <div class="row my-4  schedule_time" style="display: none;">
+                        <div class="col-3 mb-2">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 01.00 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 02.00 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 01.30 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 02.30 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 02.00 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 03.00 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 02.30 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 03.30 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 03.00 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 04.00 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 03.30 AM</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="rounded text-center schudule_time">
-                            <small style="font-weight: 500;"> 04.30 AM</small>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 04.00 AM</small>
+                            </div>
                         </div>
-                    </div>
+                        <div class="col-3">
+                            <div class="rounded text-center schudule_time">
+                                <small style="font-weight: 500;"> 04.30 AM</small>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-			</form>
+            </form>
 
         </div>
         <div class="col-12 col-md-7">
@@ -302,34 +295,18 @@
                             <tr>
                                 <th scope="row" class="pl-0">Len Len Test</th>
                                 <td colspan="2" class="px-0">
-                                    <button type="button"
-                                        class=" dicrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
-                                        style="width: 20px; height: 20px;"><span
-                                            class="align-items-center d-flex justify-content-center"><i
-                                                class="fa-minus fa-solid"></i></span> </button>
-                                    <div type="button"
-                                        style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"
-                                        class="btn px-md-3 btn-sm mr-1"><b>1</b> </div>
-                                    <button type="button"
-                                        class="IncrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
-                                        style="width: 20px; height: 20px;"><span
-                                            class="align-items-center d-flex justify-content-center"><i
-                                                class="fa-solid fa-plus"></i></span> </button>
+                                    <button type="button" class=" dicrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-minus fa-solid"></i></span> </button>
+                                    <div type="button" style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" class="btn px-md-3 btn-sm mr-1"><b>1</b> </div>
+                                    <button type="button" class="IncrimentBtn btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-solid fa-plus"></i></span> </button>
                                 </td>
                                 <td class="px-0">THB 3500</td>
                             </tr>
-                            
+
                             <tr style="visibility:hidden ;">
                                 <th scope="row">Basic </th>
                                 <td colspan="2">
-                                    <button type="button"
-                                        class="btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
-                                        style="width: 20px; height: 20px;"><span
-                                            class="align-items-center d-flex justify-content-center"><i
-                                                class="fa-minus fa-solid"></i></span> </button>
-                                    <div type="button"
-                                        style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"
-                                        class="btn px-3 btn-sm mr-1"><b>1</b> </div>
+                                    <button type="button" class="btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1" style="width: 20px; height: 20px;"><span class="align-items-center d-flex justify-content-center"><i class="fa-minus fa-solid"></i></span> </button>
+                                    <div type="button" style="background: #E5E3E3; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" class="btn px-3 btn-sm mr-1"><b>1</b> </div>
                                     <!-- <button type="button"
                                         class="btn bg-transparent border rounded-circle border-secondary p-0 btn-sm mr-1"
                                         style="width: 20px; height: 20px;"><span
@@ -342,9 +319,7 @@
                     </table>
                     <div class="text-center">
                         <a href="<?php echo base_url('orderSummary'); ?>">
-                            <button type="button"
-                            style="background: radial-gradient(50% 50% at 50% 50%, #B3B1B2 0%, #5F5F5F 100%)"
-                            class="btn text-white font-weight-bold"> Checkout</button>
+                            <button type="button" style="background: radial-gradient(50% 50% at 50% 50%, #B3B1B2 0%, #5F5F5F 100%)" class="btn text-white font-weight-bold"> Checkout</button>
                         </a>
                     </div>
                 </div>
@@ -374,8 +349,7 @@
                                         <h6 class="small mb-0">50% OFF</h6>
                                     </div>
 
-                                    <div class="pacakgesuggestionPrice  text-center "
-                                        style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
+                                    <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
 
                                         <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
                                     </div>
@@ -411,8 +385,7 @@
                                         <h6 class="small mb-0">50% OFF</h6>
                                     </div>
 
-                                    <div class="pacakgesuggestionPrice  text-center "
-                                        style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
+                                    <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
 
                                         <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
                                     </div>
@@ -449,8 +422,7 @@
                                         <h6 class="small mb-0">50% OFF</h6>
                                     </div>
 
-                                    <div class="pacakgesuggestionPrice  text-center "
-                                        style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
+                                    <div class="pacakgesuggestionPrice  text-center " style="color: #00B3B7;border-radius:0px 8px 8px 0px;">
 
                                         <h6 style="font-weight:600;" class="mb-0 rubicFont">THB 2000</h6>
                                     </div>
@@ -508,6 +480,8 @@
         </div>
 
     </div>
+    <?php $this->load->view("layout/footer"); ?>
+
 </body>
 <script>
     $("#show_2nd_week").click(function() {
@@ -546,15 +520,16 @@
     //     selectedday[i].addEventListener("click", view_row_function.bind(this, selectedday[i]));
     // }
 
-    $("#AddPatient").click(function(){
+    $("#AddPatient").click(function() {
         $("#AddPatient").toggleClass("themeBlueBg bg-white")
         $("#patientDetails").slideToggle();
     });
 
-    $("#patientAddredd").click(function(){
+    $("#patientAddredd").click(function() {
         $("#patientAddredd").toggleClass("themeBlueBg bg-white")
         $("#patientAddreddDetails").slideToggle();
     });
     // patientAddredd
 </script>
+
 </html>
