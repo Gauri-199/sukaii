@@ -64,6 +64,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route["AboutUs"]="EnquiryController/aboutUs";
 
+// Manage Address 
+$route["createAddress"]="EnquiryController/createAddress";
 
 
 // Login and registration
