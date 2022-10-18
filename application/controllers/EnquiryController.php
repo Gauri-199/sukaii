@@ -93,6 +93,10 @@ class EnquiryController extends CI_Controller
 	{
 		$this->load->view('contactus/aboutUs');
 	}
-
+	public function createAddress()
+	{
+		$this->load->view('manageAddress/createAddress');
+	}
+	
 
 }

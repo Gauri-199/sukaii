@@ -412,6 +412,7 @@
             </div>
         </div>
     </div>
+    <?php $this->load->view("layout/footer"); ?>
 
 </body>
 <script>
